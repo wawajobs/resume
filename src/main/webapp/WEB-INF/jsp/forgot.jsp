@@ -5,7 +5,9 @@
 <head>
 	<%@include file="/WEB-INF/jsp/common/head.jsp"%>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/static/css/forgot.css"/>
+	<script src="../../static/js/resume/base.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/jquery/jquery-3.0.0.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/resume/user.js"></script>
 	<title>sign in</title>
@@ -67,7 +69,7 @@
 		<div class="box">
 			<!--导航条-->
 			<div class="nav">
-				<a href="${pageContext.request.contextPath}/view/index.html" class="homeA">Home</a><a href="javascript;">-</a><a href="login.jsp" class="loginA">Forgot password</a>
+				<a href="${pageContext.request.contextPath}/view/index.html" class="homeA">Home</a><a href="login.jsp" class="loginA">Forgot password</a>
 			</div>
 			
 			<!--表单前边的导航-->
