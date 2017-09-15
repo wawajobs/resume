@@ -264,7 +264,7 @@ body,html{
 	    box-sizing: border-box;
 	}
 	.sure input{
-		padding-left: 10px;
+		padding-left: 8px;
 		display: block;
 		float: left;
 		height: 100%;
@@ -273,7 +273,7 @@ body,html{
 	}
 	.sure #sureMaImg{
 		display: block;
-		width: 28%;
+		width: 27%;
 		height: 100%;
 		float: right;
 		background: pink;
