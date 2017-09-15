@@ -6,18 +6,20 @@
 	<%@include file="/WEB-INF/jsp/common/head.jsp"%>
 	<title>Personal information</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/jquery/jquery-3.0.0.js"></script>
 	<meta charset="UTF-8">
 
 
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/static/js/layui/layui.css"/>
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/static/css/personalInformation.css"/>
+	<script src="../../../static/js/base.js"></script>
 	</head>
 	<body>
 		<div class="box">
 			<!--导航条-->
 			<div class="nav">
-				<a href="${pageContext.request.contextPath}/view/index.html" class="homeA">Home</a><a href="javascript;">-</a><a href="#" class="loginA">Personal information</a>
+				<a href="${pageContext.request.contextPath}/view/index.html" class="homeA">Home</a><a href="#" class="loginA">Personal information</a>
 			</div>
 			<p class="tit">Personal information</p>
 			<!--表单详情-->
@@ -38,12 +40,11 @@
 						</div>
 					</div>
 					<div class="box5">
-					<div class="obtain">
-							<p>Recommended by</p>
-							<input type="text" name="recommended" id="recommended" value="" />
+						<div class="obtain">
+								<p>Recommended by</p>
+								<input type="text" name="recommended" id="recommended" value="" />
+						</div>
 					</div>
-					</div>
-					
 					<!--==第二行==-->
 					<div class="box2">
 						<!--生日-->
@@ -107,14 +108,7 @@
 					
 					<!--==第6行==-->
 					<div class="box6">
-						<!--专业技能-->
-						<div class="specical">
-							<p>Specialized skills (if possible)</p>
-							<div class="addBox">
-								<input class="specialInput" type="text" name="specialized" id="specialized" value="" />
-								<span></span>
-							</div>
-						</div>
+						
 						<!--工作经验-->
 						<div class="years">
 							<i class="xia"></i>
@@ -135,6 +129,14 @@
 								<em>10+</em>
 							</span>
 						</div>
+						<!--专业技能-->
+						<div class="specical">
+							<p>Specialized skills (if possible)</p>
+							<div class="addBox">
+								<input class="specialInput" type="text" name="specialized" id="specialized" value="" />
+								<span></span>
+							</div>
+						</div>
 					</div>
 					<div class="moreSpecical">
 						<input type="text" name="" id="" value="" />
@@ -153,7 +155,6 @@
 							<input type="text" name="location" id="location" value="" />
 						</div>
 					</div>
-				
 					<!-- 第8行  年龄段-->
 					<div class="age">
 						<p>Expected teaching age group of students.(Can be multiple choice)</p>

@@ -23,107 +23,219 @@ body,html{
 	position: relative;
 	overflow: hidden;
 }
-/*导航条*/
-.nav{
-	position: absolute;
-	left: 0;
-	top: 38px;
-	background: url(../img/nav.png) no-repeat left top;
-	background-size: 100% 100%;
-	overflow: hidden;
-}
-.nav a{
-	color: #63d5c8;
-	font-size: 18px;
-	padding-top: 10px;
-	padding-bottom: 16px;
-	display: block;
-	float: left;
-}
-.nav .homeA{
-	padding-left: 40px;	
-}
-.nav .loginA{
-	padding-right: 95px;
+/*兼容pc端样式:*/
+@media screen and (min-width: 769px){
+	/*导航条*/
+	.nav{
+		position: absolute;
+		left: 0;
+		top: 38px;
+		overflow: hidden;
+	}
+	.nav a{
+		color: #63d5c8;
+		font-size: 18px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		display: block;
+		float: left;
+	}
+	.nav .homeA{
+		padding-left: 26px;	
+		background: url(../img/nav.png) no-repeat left top;
+		background-size: 100% 100%;
+		padding-right: 28px;
+	}
+	.nav .loginA{
+		padding-right: 23px;
+		background: url(../img/jianMiddle.png) no-repeat center;
+		background-size: 100% 100%;
+		padding-left: 30px;
+	}
+	
+	/*登录表单*/
+	.loginBox{
+		width: 33%;
+		height: 74%;
+		border: 1px solid #abdcd6;
+		margin: 0 auto;
+		margin-top: 6.6%;	
+		background: #fff;
+		border-radius: 10px;
+		box-shadow: 0px 0px 15px #999;
+	}
+	.loginBox .title{
+		width: 78%;
+		text-align: center;
+		color: #63d5c8;
+		font-size: 24px;
+		margin: 0 auto;
+		margin-top: 13.5%;
+		padding-bottom:53px;
+		border-bottom: 1px solid #e3e7ed;
+	}
+	.loginBox #email,.loginBox #password,.loginBox #passwordAgain{
+		display: block;
+		width: 75%;
+		outline: none;
+		border: 1px solid #e3e7ed;
+		height: 39px;
+		margin: 0 auto;
+		margin-bottom: 28px;
+		padding-left: 10px;
+	}
+	.loginBox #passwordAgain{
+		margin-bottom: 46px;
+	}
+	::-webkit-input-placeholder{
+		color: #c3c6cd;
+		font-size: 15px;
+	}
+	.loginBox #email{
+		margin-top: 52px;
+	}
+	.loginBox #sub{
+		width: 78%;
+		background: #63d4c8;
+		display: block;
+		outline: none;
+		border: 0;
+		height: 44px;
+		color: #fff;
+		font-size: 16px;
+		margin: 0 auto;
+		margin-bottom: 35px;
+	}
+	.loginBox .more{
+		width: 100%;
+		text-align: center;
+	}
+	.loginBox .more .leftA{
+		color: #9fa3af;
+		font-size: 12px;
+	}
+	.loginBox .more .rightA{
+		color: #63d4c8;
+		font-size: 12px;
+		margin-left: 10px;
+	}
+	
+	/* 错误提示 */
+	.wrong{
+		color:red;
+		font-size:14px;
+		width:100%;
+		text-align:center;
+		margin: 10px 0;
+	}
 }
 
-
-/*登录表单*/
-.loginBox{
-	width: 33%;
-	height: 74%;
-	border: 1px solid #abdcd6;
-	margin: 0 auto;
-	margin-top: 6.6%;	
-	background: #fff;
-	border-radius: 10px;
-	box-shadow: 0px 0px 15px #999;
+/*兼容移动端样式*/
+@media screen and (max-width: 768px){
+	/*导航条*/
+	.nav{
+		position: absolute;
+		left: 0;
+		top: 38px;
+		overflow: hidden;
+	}
+	.nav a{
+		color: #63d5c8;
+		font-size: 18px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		display: block;
+		float: left;
+	}
+	.nav .homeA{
+		padding-left: 26px;	
+		background: url(../img/nav.png) no-repeat left top;
+		background-size: 100% 100%;
+		padding-right: 28px;
+	}
+	.nav .loginA{
+		padding-right: 23px;
+		background: url(../img/jianMiddle.png) no-repeat center;
+		background-size: 100% 100%;
+		padding-left: 30px;
+	}
+	
+	/*登录表单*/
+	.loginBox{
+		width: 3rem;
+		height: 74%;
+		border: 1px solid #abdcd6;
+		margin: 0 auto;
+		margin-top: 1rem;	
+		background: #fff;
+		border-radius: 10px;
+		box-shadow: 0px 0px 15px #999;
+	}
+	.loginBox .title{
+		width: 78%;
+		text-align: center;
+		color: #63d5c8;
+		font-size: 24px;
+		margin: 0 auto;
+		margin-top: 13.5%;
+		padding-bottom:53px;
+		border-bottom: 1px solid #e3e7ed;
+	}
+	.loginBox #email,.loginBox #password,.loginBox #passwordAgain{
+		display: block;
+		width: 75%;
+		outline: none;
+		border: 1px solid #e3e7ed;
+		height: 39px;
+		margin: 0 auto;
+		margin-bottom: 28px;
+		padding-left: 10px;
+	}
+	.loginBox #passwordAgain{
+		margin-bottom: 46px;
+	}
+	::-webkit-input-placeholder{
+		color: #c3c6cd;
+		font-size: 15px;
+	}
+	.loginBox #email{
+		margin-top: 52px;
+	}
+	.loginBox #sub{
+		width: 78%;
+		background: #63d4c8;
+		display: block;
+		outline: none;
+		border: 0;
+		height: 44px;
+		color: #fff;
+		font-size: 16px;
+		margin: 0 auto;
+		margin-bottom: 35px;
+	}
+	.loginBox .more{
+		width: 100%;
+		text-align: center;
+	}
+	.loginBox .more .leftA{
+		color: #9fa3af;
+		font-size: 12px;
+	}
+	.loginBox .more .rightA{
+		color: #63d4c8;
+		font-size: 12px;
+		margin-left: 10px;
+	}
+	
+	/* 错误提示 */
+	.wrong{
+		color:red;
+		font-size:14px;
+		width:100%;
+		text-align:center;
+		margin: 10px 0;
+	}
 }
-.loginBox .title{
-	width: 78%;
-	text-align: center;
-	color: #63d5c8;
-	font-size: 24px;
-	margin: 0 auto;
-	margin-top: 13.5%;
-	padding-bottom:53px;
-	border-bottom: 1px solid #e3e7ed;
-}
-.loginBox #email,.loginBox #password,.loginBox #passwordAgain{
-	display: block;
-	width: 75%;
-	outline: none;
-	border: 1px solid #e3e7ed;
-	height: 39px;
-	margin: 0 auto;
-	margin-bottom: 28px;
-	padding-left: 10px;
-}
-.loginBox #passwordAgain{
-	margin-bottom: 46px;
-}
-::-webkit-input-placeholder{
-	color: #c3c6cd;
-	font-size: 15px;
-}
-.loginBox #email{
-	margin-top: 52px;
-}
-.loginBox #sub{
-	width: 78%;
-	background: #63d4c8;
-	display: block;
-	outline: none;
-	border: 0;
-	height: 44px;
-	color: #fff;
-	font-size: 16px;
-	margin: 0 auto;
-	margin-bottom: 35px;
-}
-.loginBox .more{
-	width: 100%;
-	text-align: center;
-}
-.loginBox .more .leftA{
-	color: #9fa3af;
-	font-size: 12px;
-}
-.loginBox .more .rightA{
-	color: #63d4c8;
-	font-size: 12px;
-	margin-left: 10px;
-}
-
-/* 错误提示 */
-.wrong{
-	color:red;
-	font-size:14px;
-	width:100%;
-	text-align:center;
-	margin: 10px 0;
-}
-
 
 
 

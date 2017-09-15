@@ -5,8 +5,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
 		<title>sign in</title>
 		<link rel="stylesheet" type="text/css" href="static/css/login.css"/>
+		<script src="static/js/base.js"></script>
 		<script type="text/javascript" src="static/js/jquery/jquery-3.0.0.js"></script>
 		<script src="static/js/jquery-cookie/jquery.cookie-1.3.1.js" type="text/javascript"></script>
 		<script>
@@ -67,7 +69,7 @@
 		<div class="box">
 			<!--导航条-->
 			<div class="nav">
-				<a href="${pageContext.request.contextPath}/view/index.html" class="homeA">Home</a><a href="javascript;">-</a><a href="login.jsp" class="loginA">Sign in</a>
+				<a href="${pageContext.request.contextPath}/view/index.html" class="homeA">Home</a><a href="login.jsp" class="loginA">Sign in</a>
 			</div>
 			
 			<!--登录表单-->
