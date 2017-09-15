@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- 为Dao接口方法提供sql语句配置 -->
+<mapper namespace="com.resume.dao.InterviewFlowDao">
+	
+	<insert id="insertInterviewFlow" parameterType="InterviewFlowPo">
+		insert into t_interview_flow  
+		(resume_id,step,create_time,creator_id,updater_id)
+		VALUES
+		(#{resumeId},#{step},#{createTime},#{creatorId},#{updaterId})
+		<selectKey resultType="long" order="AFTER" keyProperty="id"> <include refid="public_sql.increment_sql" /> </selectKey>
+	</insert>
+	
+	<update id="updateFlowStatus">
+		update t_interview_flow set step=#{step},updater_id=#{updaterId}
+		<if test="received != null">
+			,received = #{received}
+		</if>
+		<if test="accepted != null">
+			,accepted = #{accepted}
+		</if>
+		<if test="arrivedDate != null">
+			,arrived_date = #{arrivedDate}
+		</if>
+		<if test="refused != null">
+			,refused = #{refused}
+		</if>
+		<if test="visaDate != null">
+			,visa_date = #{visaDate}
+		</if>
+		<if test="place != null">
+			,place = #{place}
+		</if>
+		<if test="flightDate != null">
+			,flight_date = #{flightDate}
+		</if>
+		 where resume_id=#{resumeId}		
+	</update>
+	
+	<select id="queryById" parameterType="long" resultType="InterviewFlowPo">
+		select id,resume_id,step,received,accepted,arrived_date,refused,visa_date
+		from t_interview_flow
+		where id=#{id}
+	</select>
+
+	<select id="queryByResumeId"  parameterType="long" resultType="InterviewFlowPo">
+		select id,resume_id,step,received,accepted,arrived_date,refused,visa_date,place,flight_date 
+		from t_interview_flow
+		where resume_id=#{resumeId}
+		
+	</select>
+	<select id="listPos" resultType="InterviewFlowPo">
+		select f.id,f.resume_id,f.step,f.received,f.accepted,f.arrived_date,f.refused,f.visa_date,
+		r.id "resumeInfoPo.id",r.name "resumeInfoPo.name",r.age "resumeInfoPo.age",r.gender "resumeInfoPo.gender",
+		r.position "resumeInfoPo.position",r.phone "resumeInfoPo.phone",r.citizenship "resumeInfoPo.citizenship",
+		r.education "resumeInfoPo.education",r.major "resumeInfoPo.major",r.country "resumeInfoPo.country",
+		r.certification "resumeInfoPo.certification",r.specialized "resumeInfoPo.specialized",
+			r.experience_length "resumeInfoPo.experienceLength",r.other_positions "resumeInfoPo.otherPositions",
+			r.birth_date "resumeInfoPo.birthDate",
+			r.salary "resumeInfoPo.birthDate",r.location "resumeInfoPo.birthDate",r.create_time "resumeInfoPo.createTime"
+		
+		from t_interview_flow f
+		inner join t_resume_info r on f.resume_id = r.id 
+		where step=#{step}
+		<if test="col != null and col != ''">
+			order by #{col} #{order}
+		</if>
+		<if test="beginIndex != null and beginIndex !='' ">
+			limit beginIndex,size
+		</if>
+		
+		
+	</select>
+	
+
+	
+	
+</mapper>

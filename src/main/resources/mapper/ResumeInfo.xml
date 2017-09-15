@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- 为Dao接口方法提供sql语句配置 -->
+<mapper namespace="com.resume.dao.ResumeInfoDao">
+
+	<insert id="insertResumeInfo" parameterType="ResumeInfoPo">
+		insert into t_resume_info 
+		(name,age,gender,position,phone,citizenship,education,major,country,certification,specialized,
+experience_length,other_positions,birth_date,salary,location,recommended,create_time,creator_id,updater_id)
+		VALUES
+		(#{name},#{age},#{gender},#{position},#{phone},#{citizenship},
+		#{education},#{major},#{country},#{certification},#{specialized},#{experienceLength},
+		#{otherPositions},#{birthDate},#{salary},#{location},#{recommended},#{createTime},#{creatorId},
+		#{updaterId})
+		<selectKey resultType="long" order="AFTER" keyProperty="id"> <include refid="public_sql.increment_sql" /> </selectKey>
+	</insert>
+	
+	<update id="updateResumeInfo" parameterType="ResumeInfoPo">
+		update t_resume_info
+		set name=#{name},
+		age=#{age},
+		gender=#{gender},
+		position=#{position},
+		phone=#{phone},
+		citizenship=#{citizenship},
+		education=#{education},
+		major=#{major},
+		country=#{country},
+		certification=#{certification},
+		specialized=#{specialized},
+		experience_length=#{experienceLength},
+		other_positions=#{otherPositions},
+		birth_date=#{birthDate},
+		salary=#{salary},
+		location=#{location},
+		recommended=#{recommended},
+		updater_id=#{updaterId}
+		where id=#{id}
+	
+	</update>
+	
+	<select id="queryById" parameterType="long" resultType="ResumeInfoPo">
+		select id, name,age,gender,position,phone,citizenship,education,major,country,certification,specialized,
+experience_length,other_positions,birth_date,salary,location,recommended,create_time,creator_id,updater_id,update_time
+		from t_resume_info
+		where id=#{id}
+	</select>
+	
+	<select id="queryByIds" parameterType="list" resultType="ResumeInfoPo">
+		select id, name,age,gender,position,phone,citizenship,education,major,country,certification,specialized,
+experience_length,other_positions,birth_date,salary,location,recommended,create_time,creator_id,updater_id,update_time
+		from t_resume_info
+		where id in 
+		<foreach collection="ids" item="id" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</select>
+	
+	<select id="queryByUserId" parameterType="long" resultType="ResumeInfoPo">
+		select id, name,age,gender,position,phone,citizenship,education,major,country,certification,specialized,
+experience_length,other_positions,birth_date,salary,location,recommended,create_time,creator_id,updater_id,update_time
+		from t_resume_info
+		where creator_id=#{userId} limit 1
+	</select>
+	
+	<select id="queryList" resultType="ResumeInfoPo">
+		SELECT id,name,age,gender,position,phone,citizenship,education,major,country,certification,specialized,
+			experience_length,other_positions,birth_date,salary,location,recommended,create_time,creator_id,updater_id,update_time
+		FROM 
+			t_resume_info
+		ORDER BY 
+			create_time DESC 
+		LIMIT 
+			#{beginIndex},#{size}
+	</select>
+	
+
+	
+	
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- 为Dao接口方法提供sql语句配置 -->
+<mapper namespace="com.resume.dao.FeedbackDao">
+
+	<insert id="insertFeedback" parameterType="FeedbackPo">
+		insert into t_feedback 
+		(name,email,title,message,create_time)
+		VALUES
+		(#{name},#{email},#{title},#{message},#{createTime})
+		<selectKey resultType="long" order="AFTER" keyProperty="id"> <include refid="public_sql.increment_sql" /> </selectKey>
+	</insert>
+	
+	<select id="queryList">
+		SELECT id,name,email,title,message,create_time
+		FROM 
+			t_feedback
+		ORDER BY 
+			create_time DESC 
+		<if test="beginIndex !=null and size != null">
+			LIMIT 
+				#{beginIndex},#{size}
+		</if>	
+	</select>
+	
+	
+</mapper>

@@ -1,0 +1,351 @@
+/*-------------------------------------base-重置部分--------------------------------------------*/
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{ font-family:"微软雅黑";}
+em,i{font-style: normal;}
+
+/*-------------------------------------页面部分--------------------------------------------*/
+body,html{
+	width: 100%;
+	height: 100%;
+}
+
+/*现在只有pc版的*/
+.box{
+	width: 100%;
+	/*height: 100%;*/
+	background: url(../img/back2.png) no-repeat center;
+	background-size: 100% 100%;
+	position: relative;
+	padding-bottom: 145px;
+}
+/*导航条*/
+.nav{
+	position: absolute;
+	left: 0;
+	top: 38px;
+	background: url(../img/nav.png) no-repeat left top;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.nav a{
+	color: #69c3ee;
+	font-size: 18px;
+	padding-top: 10px;
+	padding-bottom: 16px;
+	display: block;
+	float: left;
+}
+.nav .homeA{
+	padding-left: 32px;	
+}
+.nav .loginA{
+	padding-right: 70px;
+}
+.tit{
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	padding-top: 115px;
+	margin-bottom: 52px;
+}
+/*表单详情*/
+.formBox{
+	width: 60%;
+	background: #fff;
+	margin: 0 auto;
+    box-shadow: 0px 0px 15px #999;
+    border-radius: 2px;
+    overflow: hidden;
+    font-size: 13px;
+    color: #303030;
+}
+/*box1*/
+.box1,.box2,.box3,.box4,.box5,.box6,.box7,.age{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 76px;
+	margin-bottom: 19px;
+}
+.box2,.box3,.box4,.box5,.box6,.box7,.age{
+	margin-top: 0;
+}
+.box1 div,.box2 div,.box3 div,.box4 div,.box5 div,.box6 div,.box7 div{
+	width: 42%;
+	height: 100%;
+}
+.box1 p,.box2 p,.box3 p,.box4 p,.box5 p,.box6 p,.box7 p,.age p{
+	margin-bottom: 13px;
+}
+.box1 input,.box2 input,.box3 input,.box4 input,.box5 input,.box6 input,.box7 input{
+	width: 100%;
+	height: 42px;
+	border: 1px solid #e3e7ed;
+	outline: none;
+	background: transparent;
+	font-size: 16px;
+	color: #222;
+	padding-left: 10px;
+}
+.box1 .name{
+	float: left;
+	margin-left: 4.8%;
+}
+.box1 .position{
+	float: right;
+	margin-right: 6%;
+}
+/*box2*/
+.box2 .date{
+	float: left;
+	margin-left: 4.8%;
+}
+.box2 .contact{
+	float: right;
+	margin-right: 6%;
+}
+/*box3*/
+.box3 .sex{
+	float: left;
+	margin-left: 4.8%;
+}
+.box3 .citizen{
+	float: right;
+	margin-right: 6%;
+}
+.box3 .sex input{
+	display: none;
+}
+.box3 .sex label{
+	display: block;
+	width: 30%;
+	height: 100%;
+	border: 1px solid #e3e7ed;
+	color: #e3e7ed;
+	text-align: center;
+	line-height: 42px;
+	font-size: 16px;
+}
+.box3 .sex .active{
+	color: #61c0e8;
+	border: 1px solid #61c0e8;
+}
+.mel{
+	float: left;
+	cursor: pointer;
+}
+.fmel{
+	float: left;
+	cursor: pointer;
+	margin-left: 5.5%;
+}
+.otherMan{
+	float: right;
+	cursor: pointer;
+    margin-right: -10px;
+}
+/*box4*/
+.box4 .edu{
+	float: left;
+	margin-left: 4.8%;
+}
+.box4 .major{
+	float: right;
+	margin-right: 6%;
+}
+/*box5*/
+.box5 .obtain{
+	float: left;
+	margin-left: 4.8%;
+}
+.box5 .degree{
+	float: right;
+	margin-right: 6%;
+}
+/*box6*/
+.box6 .specical{
+	float: left;
+	margin-left: 4.8%;
+	margin-bottom: 19px;
+}
+.box6 .years{
+	float: right;
+	margin-right: 6%;
+	position: relative;
+}
+/*box7*/
+.box7 .money{
+	float: left;
+	margin-left: 4.8%;
+}
+.box7 .china{
+	float: right;
+	margin-right: 6%;
+}
+/*box8 单选框*/
+.age{
+	width: 90.4%;
+	margin: 0 auto;
+	margin-bottom: 19px;
+	overflow: hidden;
+}
+.age input{
+	display: none;
+}
+.age label{
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 1px solid #e3e7ed;
+	margin-right: 12px;
+	float: left;
+	cursor: pointer;
+}
+.age label em{
+	display: block;
+	border-radius: 50%;
+	background: #69c3ee;
+	width: 15px;
+	height: 15px;
+    margin-top: 2.5px;
+    margin-left: 2.4px;
+    display: none;
+}
+.age span{
+	margin-right: 52px;
+	float: left;
+}
+/*第9行 建议*/
+.others{
+	width: 90.4%;
+	margin: 0 auto;
+	margin-bottom: 13px;
+	overflow: hidden;
+}
+
+.messageIt{
+	display: block;
+	border: 1px solid #e3e7ed;
+	margin: 0 auto;
+	width: 86.4%;
+	min-height: 160px;
+	resize: none;
+	outline: none;
+	color: #222;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 10px 2%;
+	margin-bottom: 30px;
+}
+.btb{
+	width: 100%;
+	height: 42px;
+	margin-bottom: 22px;
+	line-height: 42px;
+}
+.btb div{
+	width: 170px;
+	height: 100%;
+	text-align: center;
+	float: right;
+	font-size: 18px;
+}
+.btb .save{
+	margin-right: 15px;
+	color: #61c0e8;
+	border: 1px solid #61c0e8;
+	background: #fff;
+	cursor: pointer;
+}
+.btb .Next{
+	color: #fff;
+	margin-right: 3%;
+	background: #61c0e8;
+	cursor: pointer;
+}
+/*其他*/
+.moreSpecical{
+	width: 100%;
+	float: left;
+}
+.moreSpecical input{
+	display: block;
+	width: 42%;
+	height: 42px;
+    border: 1px solid #e3e7ed;
+    outline: none;
+    font-size: 16px;
+    color: #222;
+    padding-left: 10px;
+    margin-left: 4.8%;
+    margin-bottom: 19px;
+}
+.specical .addBox{
+	width: 103%;
+	overflow: hidden;
+    border: 1px solid #e3e7ed;
+}
+.specical .specialInput{
+	width: 70%;
+	float: left;
+	border: 0;
+}
+.specical span{
+	display: block;
+	width: 32px;
+	height: 32px;
+	float: right;
+	margin-right: 6px;
+	margin-top: 6px;
+	background: url(../img/add.png) no-repeat center;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+.years .yearsNumber{
+	background: url(../img/down.png) no-repeat;
+	background-size: 20px 11px;
+	background-position: 96% 20px;
+}
+.years .numberSpan{
+	position: absolute;
+	top: 100%;
+	right: -12px;
+	width: 50%;
+	text-align: center;
+	background: aliceblue;
+	display: none;
+}
+.years .numberSpan em{
+	display: block;
+	width: 100%;
+	height: 24px;
+	line-height: 24px;
+	cursor: pointer;
+}
+.years .numberSpan em:hover{
+	background: darkturquoise;
+}
+.box6{
+	overflow: visible;
+}
+.years .none{
+	display: block;
+}
+.years .xia{
+    display: block;
+    width: 40px;
+    padding: 23px;
+    position: absolute;
+    right: -12px;
+    bottom: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+

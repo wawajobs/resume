@@ -1,0 +1,1469 @@
+/*-------------------------------------base-重置部分--------------------------------------------*/
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{font-size:62.5%; font-family:"微软雅黑";}
+em,i{font-style: normal;}
+
+/*-------------------------------------页面部分--------------------------------------------*/
+body,html{
+	width: 100%;
+}
+/*.box{
+	overflow: hidden;
+	overflow-x: hidden;
+}*/
+#Login,#Signup{
+	cursor: pointer;
+}
+/*兼容pc端样式:*/
+@media screen and (min-width: 769px){      
+	/*logo*/
+.logoBox{
+	width: 100%;
+	height: 122px;
+	background: #fff;
+    overflow: hidden;
+}
+.Pbox{
+	color: #fff;
+}
+.logoBox .up{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.logoBox .up .logo{
+	width: 200px;
+	height: 87px;
+	float: left;
+	margin: 11px 0 0 40px;
+}
+.logoBox .up .signAndLog{
+	float: right;
+	font-size: 16px;
+	margin: 36px 39px 0 0;
+}
+.logoBox .down{
+	width: 66%;
+	height: 49px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+form{
+	width: 100%;
+	overflow: hidden;
+}
+.logoBox .down li{
+	width: 12.5%;
+	height: 100%;
+	box-sizing: border-box;
+	float: left;
+	font-size: 11px;
+	text-align: center;
+	line-height: 44px;
+	border: 2px solid #ededed;
+	border-left: 0;
+}
+.logoBox .down .first{
+	border-left: 2px solid #ededed;
+}
+/*banner*/
+.banner{
+	width: 100%;
+	height: 380px;
+	overflow: hidden;
+	position: relative;
+	margin-top: 1px;
+}
+.banner img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+    left: 0;
+    top: 0;
+}
+.banner #con{
+	font-family: arial;
+	width: 40%;
+	color: #fff;
+	font-size: 15px;
+	position: absolute;
+	right: 6%;
+	bottom: 50px;
+	overflow: hidden;
+	background: #4286c5;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	padding:20px 10px;
+}
+.banner #con p{
+	margin-left: 24px;
+}
+.banner #con p a{
+	color: #fff;
+	font-size: 10px;
+}
+#con .con1{
+	margin-top: 14px;
+}
+#con .con2{
+	margin: 0 0 10px 0;
+}
+/*lun2Box*/
+.lun2Box{
+	width: 100%;
+/*	height: 760px;*/
+	height: 100%;
+	background: url(../img/lun2.png) no-repeat center;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.lun2Box .up{
+	width: 67%;
+	/*height: 210px;*/
+	margin: 0 auto;
+	font-size:15px; 
+	overflow: hidden;
+}
+.lun2Box .up .p3{
+	margin-bottom: 3%;
+}
+.lun2Box .down{
+	width: 67%;
+	margin: 0 auto;
+	position: relative;
+	margin-bottom: 42px;
+}
+.lun2Box .down img{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	opacity: 0;
+}
+.lun2Box .up .p1{
+	height: 98px;
+	font-size: 33px;
+	line-height: 98px;
+	margin-top: 27px;
+}
+.lun2Box .up .p2{
+	margin-bottom: 3%;
+	font-size: 18px;
+	line-height: 24px;
+}
+/*lun3Box*/
+.lun3Box{
+	width: 100%;
+	height: 100%;
+}
+.slide1{
+	background: url(../img/lun3-3.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.slide1 p,.slide2 p{
+	width: 100%;
+	font-size: 12px;
+}
+.slide1 .title{
+	font-size: 32px;
+	height: 80px;
+	line-height: 85px;
+	text-align: center;
+}
+.slide1 .conP2{
+	margin: 10px 0;
+}
+.slide1 .conP1{
+	/*margin-left: 30%;*/
+}
+.slide1 .conP2 span{
+	margin-right: 64px;
+}
+.slide1 .conP3 span{
+	margin: 0 32px;
+}
+
+.slide2{
+	background: url(../img/lun3-1.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+.slide2 .conP1{
+	margin-left: 13%;
+	line-height: 25px;
+}
+.slide2 .title{
+	height: 80px;
+    line-height: 80px;
+	font-size: 32px;
+	text-align: center;
+}
+.slide2 .con2 span{
+	margin-right: 65px;
+}
+.slide2 .con3 span{
+	margin-right: 65px;
+}
+.slide3{
+	background: url(../img/lun3-2.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.slide3 .title{
+	height: 80px;
+    line-height: 80px;
+	font-size: 34px;
+	text-align: center;
+}
+.slide3 .conP1{
+	font-size: 12px;
+	margin-left: 11%;
+	line-height: 28px;
+}
+.slide3 .con3 span{
+	margin: 0 95px 0 36px;
+}
+.slide4{
+	background: url(../img/lun3-4.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.slide4 .title{
+	height: 80px;
+    line-height: 80px;
+	font-size: 34px;
+	text-align: center;
+}
+.slide4 .conP1{
+	font-size: 15px;
+	margin-left: 4%;
+	line-height: 28px;
+}
+.slide4 .con3 span{
+	margin-right: 90px;
+}
+.teaDown, .teaDownMask{
+	width: 45%;
+	margin: 0 auto;
+    overflow: hidden;
+    background: #4286c5;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    padding: 20px;
+}
+    
+/*whyChoose*/
+.whyBox{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	margin-top: 7%;
+}
+.whyBox p{
+	margin-left: 17%;
+	font-size: 12px;
+}
+.whyBox .con1{
+	line-height: 24px;
+	width: 32%;
+}
+.whyBox .tit{
+	font-size: 32px;
+	margin-top: 50px;
+	margin-bottom: 18px;
+}
+.sixBox{
+	width: 56%;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 32px;
+	margin-bottom: 50px;
+}
+.sixBoxBox{
+	width: 120%;
+	overflow: hidden;
+}
+.sixBoxBox .boxAlone{
+	width: 38%;
+	height: 110px;
+	border: 2px solid #dcdcdc;
+	float: left;
+	margin-right: 12px;
+	margin-bottom: 12px;
+	font-size: 12px;
+	line-height: 16px;
+	overflow: hidden;
+}
+.boxAlone p{
+	padding-right: 5px;
+}
+.boxAlone .AloneCont{
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+.Alone1 img{
+	width: 61px;
+	height: 61px;
+	float: left;
+	margin: 20px 17px 0 24px;
+}
+.Alone2 img{
+	width: 61px;
+	height: 61px;
+	float: left;
+	margin: 27px 23px 0 27px;
+}
+.Alone3 img{
+	width: 55px;
+	height: 53px;
+	float: left;
+	margin: 24px 18px 0 29px;
+}
+.Alone4 img{
+	width: 54px;
+	height: 52px;
+	float: left;
+	margin: 24px 23px 0 25px;
+}
+.Alone5 img{
+	width: 44px;
+	height: 35px;
+	float: left;
+	margin: 28px 25px 0 33px;
+}
+.Alone6 img{
+	width: 55px;
+	height: 55px;
+	float: left;
+	margin: 24px 20px 0 25px;
+}
+.boxAlone .titl{
+	font-size: 14px;
+	height: 40px;
+	line-height: 40px;
+	margin-top: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.imgBox{
+	float: left;
+	height: 100%;
+}
+/*How do*/
+.HowBox{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #47a32f;
+	color: #fff;
+}
+.HowBox p{
+	margin-left: 17%;
+	font-size: 12px;
+}
+.HowBox .con1{
+	line-height: 24px;
+	color: #eaf5e8;
+	width: 65%;
+}
+.HowBox .tit{
+	font-size: 32px;
+	margin-top: 10%;
+	margin-bottom: 18px;
+}
+
+.circleBox{
+	width: 68%;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 52px;
+	color: #eaf5e8;
+}
+.circleBoxAlone{
+	width: 172px;
+	float: left;
+	position: relative;
+}
+.circleBoxAlone img{
+	width: 155px;
+	height: 155px;
+	margin-bottom: 26px;
+	position: relative;
+	margin-left: 8px;
+}
+.circleBox .right{
+	float: left;
+	width: 19px;
+	height: 29px;
+	margin: 63px 3.5% 0;
+}
+.circleBoxAlone P{
+	margin-left: 0;
+	text-align: center;
+	font-size: 8px;	
+}
+.pBox{
+	height: 34px;
+	margin-bottom: 16px;
+}
+.pBox p{
+	margin-left: 0;
+	text-align: center;
+	font-size: 13px;
+}
+.circleBoxAlone .kuan{
+	margin-left: -23%;
+	margin-bottom: 80px;
+}
+.circleBoxAlone .kuan p{
+	width: 130%;
+}
+/*contact us*/
+.contactBox{
+	width: 100%;
+	height: 67%;
+	background: #00639b;
+	overflow: hidden;
+	color: #fff;
+}
+.contactBox .left form{
+	font-size: 0.1rem;
+}
+
+
+.contactBox p{
+	margin-left: 17%;
+	font-size: 12px;
+}
+.contactBox .con1{
+	line-height: 24px;
+	color: #dae9f1;
+}
+.contactBox .tit{
+	font-size: 32px;
+	margin-top: 50px;
+	margin-bottom: 18px;
+}
+.contactBox .left{
+	width: 44%;
+	float: left;
+	margin-top: 65px;
+	margin-left: 17%;
+	margin-right: 40px;
+}
+.contactBox .right{
+	float: left;
+	color: #fff;
+	font-size: 12px;
+	margin-top: 74px;
+}
+.left input{
+	width: 100%;
+	height: 100%;
+	display: block;
+	border:0;
+	background: #002c52;
+	color: #fff;
+	font-size: 8px;
+	outline: none;
+	text-indent: 12px;
+}
+.left p{
+	margin-left: 0;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 12px;
+	height: 40px;
+	line-height: 40px;
+}
+.left1 input{
+	width: 49%;
+}
+.left1 #name{
+	float: left;
+}
+.left1 #email{
+	float: right;
+}
+.left #subm input{
+	background: transparent;
+}
+.left #subm{
+	width: 112px;
+	height: 38px;
+	text-align: center;
+	line-height:38px;
+	background: #11a1dc;
+	border: 1px solid #0b89c3;
+}
+::-webkit-input-placeholder { /* WebKit browsers */ 
+	color: #fff; 
+	font-size: 0.05rem;
+} 
+textarea{
+	width: 100%;
+    resize: none;
+    background: #002c52;
+    border: 0;
+    color: #fff;
+    text-indent: 12px;
+    padding-top: 18px;
+    height: 50px;
+    margin-bottom: 12px;
+}
+.lubiao img{
+	width: 24px;
+	height: 21px;
+	float: left;
+	margin-right: 11px;
+}
+.right p{
+	margin-left: 0;
+	line-height: 22px;
+	color: #dae9f1;
+}
+.right .noneImg{
+	padding-left: 36px;
+}
+.right .number{
+	font-size: 15px;
+}
+.number1{
+	margin-top: 34px;
+}
+.number1 img{
+	width: 19px;
+	height: 18px;
+	float: left;
+	margin-right: 15px;
+}
+.number2{
+	margin: 8px 0 6px 0;
+}
+.number2 img{
+	width: 23px;
+	height: 20px;
+	float: left;
+	margin-right: 15px;
+}
+.number3 img{
+	width: 22px;
+	height: 14px;
+	float: left;
+	margin-right: 15px;
+	margin-top: 5px;
+}
+/*lastBox*/
+.lastBox{
+	width: 100%;
+	background: #fcfffc;
+	overflow: hidden;
+}
+.lastBoxCenter{
+	width: 66%;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.firstBox{
+	width: 100%;
+}
+.chatBox .left{
+	float: left;
+	width: 100px;
+	margin-top: 30px;
+	margin-right: 40px;
+}
+.chatBox .left img,.chatBox .right img{
+	width: 100px;
+	height: 100px;
+}
+.chatBox .left span{
+	font-size: 0.07rem;
+    float: left;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+}
+.chatBox .right{
+	float: right;
+	margin-top: 30px;
+	width: 30%;
+    text-align: right;
+}
+.chatBox .right span{
+	float: right;
+	font-size: 0.07rem;
+}
+.chatBox .right img{
+	float: right;
+	cursor: pointer;
+}
+.chatBox .right a{
+	display: block;
+	width: 100%;
+	float: right;
+}
+.downlogo{
+	width: 99px;
+    height: 40px;
+	margin-bottom: 9px;
+	float: left;
+}
+.shareImg{
+	width: 26px;
+	height: 26px;
+	float: right;
+	margin-right: 2px;
+	cursor: pointer;
+}
+.lastP{
+	color: #000;
+	font-size: 10px;
+	padding-bottom: 46px;
+}
+.lastP span{
+	color: #9a9397;
+}
+.lastBoxCenter div{
+	overflow: hidden;
+}
+.slide1Img,.slide2Img,.slide3Img,.slide4Img{
+	display: none;
+}
+
+.teaDownMask{
+	font-size: 12px;
+	line-height: 18px;
+	height: 70%;
+    overflow-y: auto;
+    width: 75%;
+}
+.teaDownMask strong{
+	font-size: 14px;
+}
+.teaDownMask .title{
+	text-align: left;
+}
+.Pbox{
+	height: 100%;
+}
+.teaDownMask::-webkit-scrollbar{
+	width: 10px;
+    background: #fff;
+    border-radius: 10px;
+}
+.teaDownMask::-webkit-scrollbar-thumb  {
+    background: deepskyblue;
+    border-radius: 10px;
+}
+.teaDownMask .titS{
+	font-size: 17px;
+}
+.teaDownMask .title{
+	height: 40px;
+	line-height: 40px;
+	font-size: 20px;
+}
+.slide2 .conP1,.slide3 .conP1,.slide4 .conP1,.whyBox p{
+	margin-left: 0;
+}
+.whyBox .tit,.whyBox .con1{
+	text-align: center;
+}
+.whyBox .con1{
+	width: 100%;
+}
+.teaDownMask .part1,.teaDownMask .part2,.teaDownMask .part3{
+	width: 30%;
+}
+.teaDownMask .part1{
+	float: left;
+}
+.teaDownMask .part2{
+	float: left;
+	margin-left: 5%;
+}
+.teaDownMask .part3{
+	float: right;
+}
+
+}
+
+/*兼容移动端样式*/
+@media screen and (max-width: 768px){      
+	.slide1Img,.slide2Img,.slide3Img,.slide4Img{
+		display: block;
+	}
+	.logoBox {
+	    width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    z-index: 1;
+	}
+	.logoBox .up {
+	    width: 100%;
+	    overflow: hidden;
+	}
+	.logoBox .up .logo {
+	    width: 1.28rem;
+	    height: 0.4rem;
+	    float: left;
+	    margin: 0.15rem 0 0 0.04rem;
+	}
+	.logoBox .up .signAndLog {
+	    float: right;
+	    font-size: 0.16rem;
+	    margin: 0.24rem 0.18rem 0 0;
+	}
+	.logoBox .down{
+		margin-top: 0.34rem;
+	}
+	.logoBox .down li {
+	    width: 0.86rem;
+	    height: 0.49rem;
+	    font-size: 0.1rem;
+	    text-align: center;
+	    line-height: 0.48rem;
+	    border: 1px solid #e6e6e6;
+	    border-top: 0;
+	    background: #fff;
+	    opacity: 0.3;
+	    filter: alpha(opacity=30%);
+	}
+	.logoBox .down .first {
+	    border-top: 1px solid #e6e6e6;
+	}
+	.imgBanner{
+		display: none;
+	}
+	.banner {
+		position: absolute;
+		left: 0;
+		top: 0;
+	    width: 100%;
+	    height: 100%;
+	    overflow: hidden;
+	    background: url(../img/banner.jpg) no-repeat -1rem top;
+	    background-size: cover;
+	}
+	.banner img{
+	    object-fit: cover;
+	    width: 100%;
+	    height: 100%;
+	}
+	.banner #con{
+		font-family: arial;
+		width: 100%;
+		color: #fff;
+		font-size: 0.15rem;
+		overflow: hidden;
+		background: #4286c5;
+		opacity: 0.8;
+		filter: alpha(opacity=80);
+		position: absolute;
+		bottom: 0;
+	    left: 0;
+	    padding-bottom:10px;
+	}
+	.banner #con p{
+		margin-left: 24px;
+	}
+	.banner #con p a{
+		color: #fff;
+		font-size: 10px;
+	}
+	#con .con1{
+		margin-top: 14px;
+	}
+	#con .con2{
+		margin: 10px 0 10px 0;
+	}
+	/*第二屏*/
+	.lun2Box {
+	    width: 100%;
+	    height: 100%;
+	    overflow: hidden;
+	    background: #b9ddf2;
+	}
+	.lun2Box .up{
+		width: 100%;
+		height: 2.64rem;
+		background: #b9ddf2;
+		overflow: hidden;
+	}
+	.lun2Box .up .p1 {
+	    font-size: 0.18rem;
+	    margin-top: 0.75rem;
+	    margin-bottom: 0.45rem;
+	    text-align: center;
+	}
+	
+	.lun2Box .up .p2{
+	    font-size: 0.11rem;
+	    padding: 0 0.24rem;
+	    line-height: 0.2rem;
+	    max-height: 1.22rem;
+	    overflow: hidden;
+	}
+	
+	.lun2Box .down {
+	    width: 100%;
+	    height: 2.2rem;
+	    position: absolute;
+	    left: 0;
+	    bottom: 1rem;
+	}
+	.lun2Box .down img{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+	/*第三屏*/
+	.lun3Box {
+	    width: 100%;
+	    height: 100%;
+	    background: #e4eff3;
+	}
+	.slide1 {
+	    overflow: hidden;
+	}
+	.slide1 .title {
+	    text-align: center;
+	    font-size: 0.2rem;
+	    margin-top: 0.65rem;
+	    margin-bottom: 0.28rem;
+	    text-align: center;
+	}
+	.slide1 p{
+		padding: 0 0.24rem;
+		font-size: 0.11rem;
+		line-height: 0.24rem;
+	}
+	.slide1 .conP2 span{
+	    display: block;
+	}
+	
+	.slide1 .conP3 span{
+	    display: block;
+	}
+	.slide1 .con4{
+	    margin-bottom: 0.2rem;
+	}
+	.slide1Img{
+		width: 100%;
+		height: 2.34rem;
+		position: absolute;
+		left: 0;
+		bottom: 0.82rem;
+	}
+	.slide2{
+		overflow: hidden;
+	}
+	.slide2 .title {
+	    font-size: 0.2rem;
+	    text-align: center;
+	    margin-top: 0.78rem;
+	    margin-bottom: 0.34rem;
+	}
+	.slide2 p{
+		padding: 0 0.22rem;
+		font-size: 0.11rem;
+		line-height: 0.24rem;
+	}
+	.slide2 .con2 span{
+		display: block;
+	}
+	.slide2 .con4 {
+		margin-bottom: 0.17rem;	
+	}
+	.slide2 .con3 span{
+		display: block;
+	}
+	.slide2Img{
+	    width: 100%;
+	    height: 2rem;
+	    position: absolute;
+	    left: 0;
+	    bottom: 0.7rem;
+		bottom: 0.95rem;
+	}
+	.Pbox{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	.slide3{
+		overflow: hidden;
+	}
+	.slide3 .title {
+	    font-size: 0.2rem;
+	    text-align: center;
+	    margin-top: 0.78rem;
+	    margin-bottom: 0.34rem;
+	}
+	.slide3 p{
+		padding: 0 0.24rem;
+		font-size: 0.11rem;
+		line-height: 0.24rem;
+	}
+	.slide3 .con3 span {
+		display: block;
+	}
+	.slide3 .con4{
+		margin-bottom: 0.27rem;
+		line-height: 0.18rem;
+	}
+	.slide3Img{
+		width: 100%;
+		height: 2.45rem;
+		position: absolute;
+		left: 0;
+		bottom: 0.96rem;
+	}
+	.slide4{
+		overflow: hidden;
+	}
+	.slide4 .title {
+	    font-size: 0.2rem;
+	    text-align: center;
+	    margin-top: 0.78rem;
+	    margin-bottom: 0.34rem;
+	}
+	.slide4 p{
+		padding: 0 0.24rem;
+		font-size: 0.11rem;
+		line-height: 0.24rem;
+		word-break: break-all;
+		
+	}
+	.slide4 .conP1 span{
+		display: block;
+	}
+	.slide4 .con4{
+		margin-bottom: 0.14rem;
+	}
+	.slide4Img{
+		width: 100%;
+		height: 1.95rem;
+		position: absolute;
+		left: 0;
+		bottom: 0.96rem;
+	}
+	
+	/*第四屏*/
+	.whyBox{
+		width: 100%;
+		height: 100%;
+	}
+	.whyBox .tit{
+	    font-size: 0.2rem;
+	    margin-top: 0.28rem;
+	    margin-bottom: 0.18rem;
+	    text-align: center;
+	}
+	.whyBox .con1 {
+		font-size: 0.11rem;
+	    line-height: 0.18rem;
+	    padding: 0 0.25rem;
+	    margin-bottom: 0.1rem;
+	}
+	.sixBoxBox .boxAlone {
+	    width: 2.8rem;
+	    height: 0.78rem;
+	    border: 2px solid #dcdcdc;
+	    margin: 0 auto;
+	    margin-bottom: 0.02rem;
+	    font-size: 0.1rem;
+	    line-height: 0.12rem;
+	    overflow: hidden;
+	}
+	.imgBox {
+	    float: left;
+	    height: 100%;
+	}
+	.boxAlone .titl {
+	    font-size: 0.12rem;
+	    line-height: 0.32rem;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: nowrap;
+	}
+	.boxAlone .AloneCont {
+	    display: -webkit-box;
+	    -webkit-box-orient: vertical;
+	    -webkit-line-clamp: 3;
+	    overflow: hidden;
+	}
+	.Alone1 img {
+	    width: 0.44rem;
+	    height: 0.44rem;
+	    float: left;
+	    margin: 0.16rem 0.22rem 0 0.1rem;
+	}
+	.Alone2 img {
+	    width: 0.37rem;
+	    height: 0.27rem;
+	    float: left;
+	    margin: 0.2rem 0.24rem 0 0.16rem;
+	}
+	.Alone3 img {
+	    width: 0.4rem;
+	    height: 0.4rem;
+	    float: left;
+	    margin: 0.17rem 0.2rem 0 0.15rem;
+	}
+	.Alone4 img {
+	    width: 0.4rem;
+	    height: 0.4rem;
+	    float: left;
+	    margin: 0.17rem 0.2rem 0 0.15rem;
+	}
+	.Alone5 img {
+	    width: 0.39rem;
+	    height: 0.32rem;
+	    float: left;
+	    margin: 0.2rem 0.22rem 0 0.15rem;
+	}
+	.Alone6 img {
+	    width: 0.4rem;
+	    height: 0.4rem;
+	    float: left;
+	    margin: 0.16rem 0.2rem 0 0.15rem;
+	}
+	/*第五屏*/
+	.HowBox {
+	    width: 100%;
+	    height: 100%;
+	    overflow: hidden;
+	    background: #47a32f;
+	    color: #fff;
+	}
+	.HowBox .tit {
+	    font-size: 0.2rem;
+	    text-align: center;
+	    margin-top: 0.45rem;
+	    margin-bottom: 0.34rem;
+	}
+	.HowBox .con1 {
+		padding: 0 0.24rem;
+		font-size: 0.11rem;
+		line-height: 0.24rem;
+	    color: #eaf5e8;
+	    margin-bottom: 0.3rem;
+	}
+	.circleBox {
+		padding: 0 0.24rem;
+	    /*overflow: hidden;*/
+	    margin: 0 auto;
+	    color: #eaf5e8;
+	    position: relative;
+	}
+	.circleBoxAlone {
+	    width: 1.33rem;
+	   /* float: left;*/
+	    /*position: relative;*/
+	}
+	.circleBoxAlone img {
+	    width: 0.6rem;
+	    height: 0.6rem;
+	    margin-bottom: 0.08rem;
+	    position: relative;
+	    margin-left: 0.4rem;
+	}
+	.pBox {
+		text-align: center;
+		font-size: 0.1rem;
+	    height: 0.22rem;
+	    margin-bottom: 0.06rem;
+	}
+	.circleBoxAlone P {
+	    margin-left: 0;
+	    text-align: center;
+	    font-size: 0.08rem;
+	}
+	.circleBox .right {
+	    /*float: left;*/
+	    width: 0.1rem;
+	    height: 0.12rem;
+	    /*margin: 0.27rem 3.5% 0;*/
+	}
+	.circleBoxAlone3,.circleBoxAlone4{
+		/*margin-top: 0.28rem;*/
+	}
+	.circleBox .right3{
+		/*margin-top: 0.5rem;*/
+	}
+	/*第六屏*/
+	.contactBox {
+	    width: 100%;
+	    height: 5.2rem;
+	    background: #00639b;
+	    overflow: hidden;
+	    color: #fff;
+	}
+	.contactBox .tit {
+	    font-size: 0.2rem;
+	    text-align: center;
+	    margin-top: 0.78rem;
+	    margin-bottom: 0.34rem;
+	}
+	.contactBox .con1 {
+		padding: 0 0.24rem;
+	    line-height: 0.16rem;
+	    font-size: 0.11rem;
+	    color: #dae9f1;
+	}
+	.contactBox .left {
+	    width: 3.24rem;
+	    margin: 0 auto;
+	    margin-top: 0.73rem;
+	    margin-bottom: 0.25rem;
+	}
+	form {
+	    width: 100%;
+	    overflow: hidden;
+	}
+	.left p {
+	    width: 100%;
+	    overflow: hidden;
+	    margin-bottom: 0.06rem;
+	    height: 0.22rem;
+	    line-height: 0.22rem;
+	    border: 1px solid #00426c;
+	}
+	.left1 #name {
+	    float: left;
+	    width: 1.6rem;
+	}
+	.left1 #email {
+	    float: right;
+	    width: 1.6rem;
+	}
+	.left input {
+	    width: 100%;
+	    height: 100%;
+	    display: block;
+	    border: 0;
+	    background: #002c52;
+	    color: #fff;
+	    font-size: 0.1rem;
+	    outline: none;
+	    text-indent: 0.12rem;
+	}
+	.left #subm input {
+	    background: transparent;
+	}
+	textarea {
+	    width: 100%;
+	    resize: none;
+	    background: #002c52;
+	    border: 0;
+	    color: #fff;
+	    text-indent: 0.12rem;
+	    height: 0.37rem;
+	    margin-bottom: 0.2rem;
+	    border: 1px solid #00426c;
+	}
+	.left #subm {
+	    width: 1rem;
+	    height: 0.22rem;
+	    text-align: center;
+	    line-height: 0.22rem;
+	    background: #11a1dc;
+	    margin: 0 auto;
+	    border: 0;
+	    border-left: 1px solid #1182b9;
+	    border-bottom: 1px solid #1182b9;
+	}
+	.left #subm input{
+		text-indent: 0;
+		font-size: 0.08rem
+	}
+	.contactBox .right{
+	    color: #fff;
+	    font-size: 0.1rem;
+	}
+	.contactBox .right .p1{
+		float: left;
+		margin-left: 0.2rem;
+		overflow: hidden;
+		width: 1rem;
+	}
+	.contactBox .right .p2{
+		overflow: hidden;
+		float: right;
+		margin-right: 0.2rem;
+	}
+	.contactBox .right .p2 p{
+		line-height: 0.2rem;
+	}
+	.right .noneImg {
+	    padding-left: 0.23rem;
+	}
+	.right p {
+	    margin-left: 0;
+	    line-height: 0.16rem;
+	    color: #dae9f1;
+	    font-size: 0.08rem;
+	}
+	.lubiao img {
+	    width: 0.15rem;
+	    height: 0.15rem;
+        margin-left: 0.45rem;	
+	}
+	.lubiao .biaocenter{
+	    width: 100%;
+	    display: block;
+	    text-align: center;
+	}
+	.right .number {
+	    font-size: 0.1rem;
+	}
+	.number1 img {
+	    width: 0.13rem;
+	    height: 0.13rem;
+        margin-left: 0.8rem;
+	}
+	.number2 img {
+	    width: 0.15rem;
+	    height: 0.15rem;
+	    float: left;
+	    margin-right: 0.12rem;
+	}
+	.number3 img {
+	    width: 0.14rem;
+	    height: 0.09rem;
+	    float: left;
+	    margin-right: 0.13rem;
+	    margin-top: 0.07rem;
+	}
+	.lastBox {
+	    width: 100%;
+	    background: #fcfffc;
+	    overflow: hidden;
+	}
+	.lastBoxCenter {
+	    width: 3rem;
+	    height: 100%;
+	    margin: 0 auto;
+	    overflow: hidden;
+	}
+	.lastBoxCenter div {
+	    overflow: hidden;
+	}
+	.erma {
+	    width: 0.2rem;
+	    height: 0.2rem;
+	    float: left;
+	    margin-top: 0.14rem;
+	    margin-right: 0.11rem;
+	}
+	#lets {
+	    float: right;
+	    font-size: 0.08rem;
+	    margin-top: 0.28rem;
+	}
+	.downlogo {
+	    width: 0.8rem;
+    	height: 0.2rem;
+	    float: left;
+	}
+	.shareImg {
+	    width: 0.08rem;
+	    height: 0.08rem;
+	    float: right;
+	    margin-right: 0.02rem;
+	    cursor: pointer;
+	}
+	.lastP {
+	    color: #000;
+	    font-size: 0.1rem;
+        margin-top: 0.05rem;
+	}
+	.lastP span {
+	    color: #9a9397;
+	}
+	
+	.circleBoxAlone1{
+	   /* position: absolute;
+	    left: 0.24rem;
+	    top: 0;*/
+	}
+	.circleBoxAlone2{
+		width: 1.33rem;
+	    /*position: absolute;
+	    right: 0.24rem;
+	    top: 0;*/
+	}
+	.rightBox1{
+		width: 1.33rem;
+		/*overflow: hidden;*/
+		position: absolute;
+	    left: 0.24rem;
+   	 	top: 0;
+	}
+	.right1{
+		position: absolute;
+	    right: -0.2rem;
+	    top: 0.3rem;
+	}
+	.rightBox2{
+		position: absolute;
+		right: 0.24rem;
+		top: 0;
+	}
+	.right2{
+	    position: absolute;
+	    bottom: -0.2rem;
+	    left: 47%;
+	    transform: rotateZ(90deg);
+	}
+	.rightBox3{
+	    position: absolute;
+	    right: 0.24rem;
+	    width: 1.33rem;
+	    top: 2rem;
+	}
+	.right3{
+	    position: absolute;
+	    left: -0.4rem;
+	    top: 0.3rem;
+	    transform: rotateZ(180deg);
+	}
+	.circleBoxAlone4{
+	    position: absolute;
+	    left: 0.24rem;
+	    top: 2rem;
+	}
+	
+	/*底部修改*/
+	.chatBox .left{
+		float: left;
+		width: 0.7rem;
+	}
+	.chatBox .left img,.chatBox .right img{
+		width: 0.7rem;
+		height: 0.7rem;
+	}
+	.chatBox .left span{
+		font-size: 0.07rem;
+	    float: left;
+	    text-align: center;
+	    display: block;
+	    width: 100%;
+	    margin-top: 5px;
+	}
+	.chatBox .right{
+		width: 1.3rem;
+		float: right;
+	}
+	.chatBox .right span{
+		float: right;
+		font-size: 0.07rem;
+	    text-align: right;
+	}
+	.chatBox .right img{
+		float: right;
+		cursor: pointer;
+	    margin-top: 0.1rem;
+	}
+	
+	
+	.teaDownMask{
+	font-size: 0.12rem;
+	line-height: 0.24rem;
+    height: 2rem;
+    padding: 0 0.24rem;
+    overflow-y: auto;
+}
+.teaDownMask strong{
+	font-size: 0.14rem;
+}
+.teaDownMask .title{
+	text-align: left;
+}
+.Pbox{
+	height: 100%;
+}
+.teaDownMask::-webkit-scrollbar{
+	width: 0.15rem;
+    background: transparent;
+    border-radius: 0.15rem;
+}
+.teaDownMask::-webkit-scrollbar-thumb  {
+    background: deepskyblue;
+    border-radius: 0.1rem;
+}
+.teaDownMask .titS{
+	font-size: 0.17rem;
+}
+.teaDownMask .title{
+	height: 0.3rem;
+	line-height: 0.4rem;
+	font-size: 0.2rem;
+}
+.slide2 .conP1,.slide3 .conP1,.slide4 .conP1,.whyBox p{
+	margin-left: 0;
+}
+.whyBox .tit,.whyBox .con1{
+	text-align: center;
+}
+.whyBox .con1{
+	width: 94%;
+}
+.slide1 .title{
+	margin-top: 0;
+	margin-bottom: 0;
+}	
+.slide1 p{
+	padding: 0;
+}
+.slide1 .titleSpecial {
+	margin-top: 0.78rem;
+    margin-bottom: 0.14rem;
+}
+
+.teaDownMask::-webkit-scrollbar-button {
+	background-color:#FF7677;
+	border-radius: 0.15rem;
+}
+
+.top10{
+	display:none;
+}
+	
+}
+
+.seq{
+	border-left: 2px solid #CCC;
+}
+
+.menu{
+	margin : 0 5px 0 12px;
+}
+
+.head{
+	display:inline;
+	width: 45px;
+    height: 45px;
+    margin: 0px 5px -15px 10px;
+}
+
+
+
+

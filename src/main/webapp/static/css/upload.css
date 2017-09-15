@@ -1,0 +1,207 @@
+/*-------------------------------------base-重置部分--------------------------------------------*/
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{ font-family:"微软雅黑";}
+em,i{font-style: normal;}
+
+/*-------------------------------------页面部分--------------------------------------------*/
+body,html{
+	width: 100%;
+	height: 100%;
+}
+
+/*现在只有pc版的*/
+.box{
+	width: 100%;
+	height: 100%;
+	background: url(../img/back3.png) no-repeat center;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+/*导航条*/
+.nav{
+	position: absolute;
+	left: 0;
+	top: 38px;
+	background: url(../img/nav.png) no-repeat left top;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.nav a{
+	color: #69bbe6;
+	font-size: 18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	float: left;
+}
+.nav .homeA{
+	padding-left: 26px;	
+}
+.nav .loginA{
+	padding-right: 50px;
+}
+
+/*表单*/
+.formBox{
+	width: 44.5%;
+	box-shadow: 0 0 15px #5ba1c6;
+	border-radius: 40px;
+	background: #fff;
+	margin: 0 auto;
+	margin-top: 10%;
+	overflow: hidden;
+}
+.tit{
+	font-size: 26px;
+	color: #69bae5;
+	margin-top: 52px;
+	margin-bottom: 28px;
+	text-align: center;
+}
+.alone{
+	overflow: hidden;
+	margin-bottom: 15px;
+	height:37px;
+}
+.alone em{
+	font-size: 15px;
+	color: #61b7df;
+	float: left;
+	margin-left: 21px;
+	margin-right: 14px;
+    display: block;
+    height: 37px;
+    line-height: 37px;
+}
+.alone #em2{
+	margin-right: 30px;
+}
+/* .filecl{ */
+/* 	text-align: center; */
+/* 	margin-bottom: 15px */
+/* } */
+/* .filecl span{ */
+/* 	color: red; */
+/* } */
+.center{
+	width: 64%;
+	height: 35px;
+	border: 1px solid #b0dbef;
+	border-radius: 5px;
+	float: left;
+}
+.center input{
+	display: none;
+}
+.center label{
+	
+}
+#upload1,#upload2{
+	width: 12%;
+	height: 37px;
+	background: #61b7df;
+	text-align: center;
+	line-height: 36px;
+	color: #fff;
+	font-size: 12px;
+	float: left;
+	margin-left: 5px;
+	cursor: pointer;
+}
+#finish{
+	width: 31.2%;
+	height: 45px;
+	border:0;
+	background: #61b7df;
+	color: #fff;
+	font-size: 20px;
+	outline: none;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.center label{
+	display: block;
+	cursor: pointer;
+	width: 32px;
+	height: 32px;
+	background: url(../img/add.png) no-repeat center;
+	background-size: 100% 100%;
+	float: right;
+	margin-right: 3px;
+	margin-top: 1.5px;
+}
+#cont1,#cont2{
+	display: block;
+	width: 80%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #222;
+    font-size: 12px;
+    line-height: 36px;
+}
+#cont1 i,#cont2 i{
+	position: relative;
+}
+#cont1 i img,#cont2 i img{
+	position: absolute;
+	display: block;
+	width: 15px;
+	height: 15px;
+	right: -15px;
+	top: -4px;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.del{
+	width:15px;
+	height:15px;
+}
+
+#resumeDoc,#photo{
+	height: 30px;
+	margin-left: 60px;
+	margin-top: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 485px;
+	font-size: 14px;
+}
+#resumeDoc i,#photo i{
+	position: relative;
+	display: inline;
+	margin-right: 15px;
+}
+
+#resumeDoc i img,#photo i img{
+	position: absolute;
+	display: block;
+	width: 15px;
+	height: 15px;
+	right: -15px;
+	top: 0;
+	cursor: pointer;
+	z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+

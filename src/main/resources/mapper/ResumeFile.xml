@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- 为Dao接口方法提供sql语句配置 -->
+<mapper namespace="com.resume.dao.ResumeFileDao">
+	
+	<select id="queryByResumeIdAndType" resultType="ResumeFilePo">
+		select id, resume_id,user_id, file_address,file_name, file_type, type, deleted,downloaded
+		from t_resume_file
+		where resume_id = #{resumeId} and type=#{type} and deleted='0'
+	</select>
+	
+	<select id="queryByResumeIdsAndType" resultType="ResumeFilePo">
+		select id, resume_id,user_id, file_address, file_name,file_type, type, deleted,downloaded
+		from t_resume_file
+		where 
+			resume_id in
+			<foreach collection="resumeIds" item="resumeId" open="(" separator="," close=")">
+				 #{resumeId}
+			</foreach>
+			 and type=#{type} and deleted='0'
+	</select>
+	
+	<insert id="insertResumeFile" parameterType="ResumeFilePo">
+		insert into t_resume_file
+		(resume_id,user_id, file_address,file_name, file_type, type, deleted)
+		VALUES
+		(#{resumeId},#{userId},#{fileAddress},#{fileName},#{fileType},#{type},#{deleted})
+		<selectKey resultType="long" order="AFTER" keyProperty="id"> <include refid="public_sql.increment_sql" /> </selectKey>
+	</insert>
+	
+	<update id="deleteFile" parameterType="long">
+		update t_resume_file set deleted='1' where id=#{id}
+	</update>
+	<update id="downloadFile" parameterType="long">
+		update t_resume_file set downloaded='1' where id=#{id}
+	</update>
+	
+	<select id="queryById" parameterType="long" resultType="ResumeFilePo">
+		select id, resume_id,user_id, file_address,file_name, file_type, type, deleted,downloaded
+		from t_resume_file
+		where id = #{id}
+	</select>
+	
+</mapper>

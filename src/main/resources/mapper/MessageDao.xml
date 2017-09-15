@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- 为Dao接口方法提供sql语句配置 -->
+<mapper namespace="com.resume.dao.MessageDao">
+
+	<insert id="insertMessage" parameterType="MessagePo">
+		insert into t_resume_info 
+		(from_user_id,to_user_id,resume_id,title,message,create_time)
+		VALUES
+		(#{fromUserId},#{toUserId},#{resumeId},#{title},#{message},#{createTime})
+		<selectKey resultType="long" order="AFTER" keyProperty="id"> <include refid="public_sql.increment_sql" /> </selectKey>
+	</insert>
+	
+	<select id="queryList">
+		SELECT id,from_user_id,to_user_id,resume_id,title,message,create_time
+		FROM 
+			t_resume_info
+		ORDER BY 
+			create_time DESC 
+		<if test="beginIndex !=null and size != null">
+			LIMIT 
+				#{beginIndex},#{size}
+		</if>	
+	</select>
+	
+	
+</mapper>

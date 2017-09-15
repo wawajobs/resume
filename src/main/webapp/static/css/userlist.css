@@ -1,0 +1,130 @@
+/*-------------------------------------base-重置部分--------------------------------------------*/
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{font-size:62.5%; font-family:"微软雅黑";}
+em,i{font-style: normal;}
+
+/*-------------------------------------页面部分--------------------------------------------*/
+body,html{
+	width: 100%;
+	height: 100%;
+}
+
+/*现在只有pc版的*/
+.box{
+	width: 100%;
+	height: 100%;
+	background: url(../img/back2.png) no-repeat center;
+	background-size: 100% 100%;
+	position: relative;
+	padding-bottom: 145px;
+}
+/*导航条*/
+.nav{
+	position: absolute;
+	left: 0;
+	top: 38px;
+	background: url(../img/nav.png) no-repeat left top;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.nav a{
+	color: #69c3ee;
+	font-size: 18px;
+	padding-top: 10px;
+	padding-bottom: 16px;
+	display: block;
+	float: left;
+}
+.nav .homeA{
+	padding-left: 32px;	
+}
+.nav .loginA{
+	padding-right: 70px;
+}
+.tit{
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	padding-top: 115px;
+	margin-bottom: 52px;
+}
+
+.clr{
+	width: 95%;
+    background: #fff;
+    margin: 0 auto;
+    box-shadow: 0px 0px 15px #999;
+    border-radius: 2px;
+    overflow: hidden;
+    font-size: 13px;
+    color: #303030;
+}
+
+.left{
+	width:100%;
+}
+
+.left li{
+	font-size: 15px;
+    cursor: pointer;
+    margin: 5px 10px 5px 10px;
+}
+
+.sel{
+	color : blue;
+}
+
+.unsel{
+	color: #303030;
+}
+
+.right{
+	width:100%;
+	height:100%;
+}
+
+ .addBox{
+	width: 27%;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #fff;
+    margin-bottom: 25px;
+}
+ .specialInput{
+    width: 85%;
+    /* float: left; */
+    border: 0;
+    height: 35px;
+    line-height: 30px;
+    font-size: 16px;
+    margin: 0 auto;
+}
+.addBox span{
+	display: block;
+	width: 32px;
+	height: 32px;
+	float: right;
+	margin-right: 6px;
+	margin-top: 6px;
+	background: url(../img/add.png) no-repeat center;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+.ordercol{
+	color : #69c3eel;
+	
+}
+.more{
+	background-color: #00CCFF;
+	width:50px;
+	height:26px;
+	color:#FFF;
+	font-size: 12px;
+}

@@ -1,0 +1,752 @@
+/*-------------------------------------base-重置部分--------------------------------------------*/
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{ font-family:"微软雅黑";}
+em,i{font-style: normal;}
+
+/*-------------------------------------页面部分--------------------------------------------*/
+body,html{
+	width: 100%;
+	height: 100%;
+}
+
+/*现在只有pc版的*/
+.box{
+	width: 100%;
+	background: url(../img/back4.png) no-repeat center;
+	background-size: 100% 100%;
+	position: relative;
+	padding-bottom: 145px;
+	height: 3712px;
+	overflow-x: hidden;
+}
+/*导航条*/
+.nav{
+	position: absolute;
+	left: 0;
+	top: 38px;
+	background: url(../img/nav.png) no-repeat left top;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.nav a{
+	color: #495764;
+	font-size: 18px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	float: left;
+}
+.nav .homeA{
+	padding-left: 26px;	
+}
+.nav .loginA{
+	padding-right: 50px;
+}
+.messRight{
+	width: 110px;
+	height: 140px;
+	position: absolute;
+	top: 42px;
+	right: 55px;
+	cursor: pointer;
+}
+.messRight .up{
+	width: 110px;
+	height: 110px;
+	background: url(../img/message.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.messRight .down{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: #fff;
+	font-size: 13px;
+	width: 100%;
+	text-align: center;
+}
+/*中间棍*/
+.lineCenter{
+	width: 30px;
+	background: #fff;
+	position: absolute;
+	left: 37.6%;
+	top: 103px;	
+	border-radius: 15px;
+}
+.step{
+	width: 100%;
+	position: relative;
+}
+.dot{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #4b5f6e;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.ban{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #4b5f6e;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.rightDetail{
+	position: absolute;
+	left: 30px;
+	top: 100%;
+	width: 760px;
+}
+.rightDetail .gou{
+	width: 58px;
+	height: 22px;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	float: left;
+	margin-right: 3px;
+	border-bottom-left-radius: 20px;
+}
+.rightDetail .num{
+	float: left;
+	display: block;
+	width: 63px;
+	height: 63px;
+	border-radius: 50%;
+	line-height: 63px;
+	text-align: center;
+	font-size: 33px;
+	border: 1px solid #fff;
+	color: #a5abb1;
+	margin-right: 10px;
+	margin-top: -10px;
+	position: relative;
+}
+.rightDetail em{
+	float: left;
+	font-size: 14px;
+	color: #fff;
+	margin-top: 15px;
+}
+.icon{
+	width: 83px;
+	height: 83px;
+	position: absolute;
+	right: 55px;
+}
+/*数字上的对勾*/
+.rightDetail .num i{
+    position: absolute;
+    left: 4px;
+    top: 11px;
+    display: block;
+    width: 80%;
+    height: 64%;
+    background: url(../img/gou.png) no-repeat center;
+    background-size: 100% 100%;
+    display: none;
+}
+/*1*/
+.one{
+	height: 74px;
+}
+.rightDetail em i{
+	display: block;
+}
+.rightDetail em input{
+	display: block;
+	width: 180px;
+	height: 22px;
+	background: #7fc0e9;
+	color: #fff;
+	font-size: 12px;
+	border: 0;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+.i2{
+	color: #adb0b3;
+	font-size: 12px;
+	margin: 35px 0;
+	overflow: hidden;
+}
+/*2*/
+.two{
+	height: 329px;
+}
+.two .ban{
+	top: 214px;
+}
+.two .iconBan{
+	top: 180px;
+	background: url(../img/star.png) no-repeat center;
+	background-size: 100% 100%;
+}
+/*3*/
+.three{
+	height: 278px;
+}
+.three .iconBan{
+	top: 88px;
+	background: url(../img/search.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.three .ban{
+	top: 123px;
+}
+.three .i2 i{
+	float: left;
+}
+.three .i2 input{
+	display: none;
+}
+.three .i2 label{
+	float: right;
+	width: 190px;
+	height: 20px;
+	background: #fff;
+	border-top: 1px solid #7fc0e9;
+	border-bottom:  1px solid #7fc0e9;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rightDetail em .i2 span{
+	width: 54px;
+	height: 20px;
+	border-top: 1px solid #7fc0e9;
+	border-bottom:  1px solid #7fc0e9;
+	float: right;
+	display: block;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+	background: #7fc0e9;
+	cursor: pointer;
+}
+/*4*/
+.four{
+	height: 230px;
+}
+.four .ban{
+	top: 115px;
+}
+.four .iconBan{
+	top: 77px;
+	background: url(../img/upload.png) no-repeat center;
+	background-size: 100% 100%;
+}
+/*5*/
+.five{
+	height: 267px;
+}
+.five .ban{
+	top: 146px;
+}
+.five .iconBan{
+	top: 108px;
+	background: url(../img/bofang.png) no-repeat center;
+	background-size: 100% 100%;
+}
+/*6*/
+.six{
+	height: 267px;
+}
+.six .ban{
+	top: 146px;
+}
+.six .iconBan{
+	top: 108px;
+	background: url(../img/set.png) no-repeat center;
+	background-size: 100% 100%;
+}
+/*7*/
+.seven{
+	height: 256px;
+}
+.seven .ban{
+	top: 136px;
+}
+.seven .iconBan{
+	top: 100px;
+	background: url(../img/lightThree.png) no-repeat center;
+	background-size: 100% 100%;
+}
+/*8*/
+.eight{
+	height: 265px;
+}
+.eight .ban{
+	top: 150px;
+}
+.eight .iconBan{
+	top: 105px;
+	background: url(../img/set.png) no-repeat center;
+	background-size: 100% 100%;
+}
+/*9*/
+.nine{
+	height: 265px;
+}
+.nine .ban{
+	top: 150px;
+}
+.nine .iconBan{
+	top: 107px;
+	background: url(../img/lightThree.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.rightDetail em i{
+	display: block;
+}
+.nine .rightDetail em input{
+	display: block;
+	width: 130px;
+	height: 21px;
+	background: #7fc0e9;
+	color: #fff;
+	font-size: 12px;
+	border: 0;
+	margin-bottom: 20px;
+	cursor: pointer;
+	margin-left: 190px;
+	float: left;
+}
+.nine .i2{
+	color: #adb0b3;
+	font-size: 12px;
+	margin: 35px 0;
+	overflow: hidden;
+}
+.nine .rightDetail em a{
+	float: left;
+	margin-left: 55px;
+	color: #fff;
+	text-decoration: underline;
+	margin-top: 5px;
+}
+/*10*/
+.ten{
+	height: 270px;
+}
+.ten .ban{
+	top: 120px;
+}
+.ten .iconBan{
+	top: 85px;
+	background: url(../img/lightRight.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.rightDetail em i{
+	display: block;
+}
+.ten .rightDetail em input{
+	display: block;
+	width: 130px;
+	height: 21px;
+	background: #7fc0e9;
+	color: #fff;
+	font-size: 12px;
+	border: 0;
+	margin-bottom: 20px;
+	cursor: pointer;
+	margin-left: 190px;
+	float: left;
+}
+.ten .i2{
+	color: #adb0b3;
+	font-size: 12px;
+	overflow: hidden;
+	margin-top: 18px;
+}
+.ten .rightDetail em a{
+	float: left;
+	margin-left: 55px;
+	color: #fff;
+	text-decoration: underline;
+	margin-top: 5px;
+}
+/*11*/
+.eleven{
+	height: 268px;
+}
+.eleven .ban{
+	top: 115px;
+}
+.eleven .iconBan{
+	top: 76px;
+	background: url(../img/email.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.rightDetail em i{
+	display: block;
+}
+.eleven .rightDetail em input{
+	display: block;
+	width: 130px;
+	height: 21px;
+	background: #7fc0e9;
+	color: #fff;
+	font-size: 12px;
+	border: 0;
+	margin-bottom: 20px;
+	cursor: pointer;
+	margin-left: 190px;
+	float: left;
+}
+.eleven .i2{
+	color: #adb0b3;
+	font-size: 12px;
+	overflow: hidden;
+	margin-top: 18px;
+}
+/*12*/
+.twelve{
+	height: 250px;
+}
+.twelve .iconBan{
+	top: 75px;
+	background: url(../img/person.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.twelve .ban{
+	top: 115px;
+}
+.twelve .i2 i{
+	float: left;
+}
+.twelve .i21{
+	margin-right: 7px;
+}
+.twelve .rightDetail em .i2 span{
+	width: 91px;
+	height: 20px;
+	float: left;
+	display: block;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+	background: #7fc0e9;
+	cursor: pointer;
+}
+.twelve em .i2 input{
+	background: #fff;
+	width: 94px;
+	height: 22px;
+	float: left;
+	outline: none;
+	padding-left: 5px;
+	color: #222;
+}
+.twelve em .i2{
+	margin-top: 30px;
+}
+/*13*/
+.thirteen{
+	height: 267px;
+}
+.thirteen .iconBan{
+	top: 110px;
+	background: url(../img/earth.png) no-repeat center;
+	background-size: 100% 100%;
+}
+.thirteen .ban{
+	top: 147px;
+}
+.thirteen .i2 i{
+	float: left;
+}
+.thirteen .i21{
+	margin-right: 7px;
+}
+.thirteen .rightDetail em .i2 span{
+	width: 91px;
+	height: 20px;
+	float: left;
+	display: block;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+	background: #7fc0e9;
+	cursor: pointer;
+}
+.thirteen em .i2 input{
+	background: #fff;
+	width: 94px;
+	height: 22px;
+	float: left;
+	outline: none;
+	padding-left: 5px;
+	color: #222;
+}
+.thirteen em .i2{
+	margin-top: 30px;
+	margin-bottom: 0;
+}
+.thirteen .i2 #up13Input{
+	display: none;
+}
+.thirteen .i2 label{
+	float: left;
+	width: 99px;
+	height: 20px;
+	background: #fff;
+	border-top: 1px solid #7fc0e9;
+	border-bottom:  1px solid #7fc0e9;
+}
+.thirteen .i21{
+	margin-right: 14px;
+}
+.thirteen .i22{
+	margin-right: 31px;
+}
+.thirteen .rightDetail em .i2 span{
+	width: 54px;
+	height: 20px;
+	border-top: 1px solid #7fc0e9;
+	border-bottom:  1px solid #7fc0e9;
+	float: left;
+	display: block;
+	line-height: 20px;
+	text-align: center;
+	color: #fff;
+	background: #7fc0e9;
+	cursor: pointer;
+}
+.thirteen em .i3{
+	margin-top: 5px;
+}
+.thirteen #up13label{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color:#000;
+}
+/*14*/
+.fourteen{
+	height: 266px;
+}
+.fourteen .ban{
+	top: 147px;
+}
+.fourteen .iconBan{
+	top: 106px;
+	background: url(../img/bao.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+/*last*/
+.last{
+	height: 100px;
+	border-bottom-right-radius: 50%;
+}
+
+/*上边飘着的颜色进度条*/
+.now{
+	width: 100%;
+	height: 200px;
+	background: #00e27b;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	border-radius: 15px;
+}
+
+@-webkit-keyframes twinkling{ /*透明度由0到1*/
+	0%{
+		opacity:0.4; /*透明度为0*/
+	}
+	100%{
+		opacity:1; /*透明度为1*/
+	}
+}
+
+.resumeFile{
+     -webkit-animation: twinkling 2s infinite ease-in-out; 
+}
+
+
+/*===========================新版优化=================================*/
+/*正在编辑的步骤放大*/
+.rightDetail .bigNow{
+	width: 101px;
+	height: 101px;
+	font-size: 40px;
+	line-height: 100px;
+	margin-right: 20px;
+	margin-top: -30px;
+}
+.rightDetail .bigNowEm{
+	font-size: 22px;
+}
+.lineCenter{
+	left: 27%;
+}
+.three .i2{
+	width: 420px;
+	overflow: hidden;
+	margin: 0;
+}
+.three .i2 input{
+	float: right;
+}
+.three .rightDetail #finishUpload{
+	width: 100px;
+	height: 22px;
+	border: 0;
+	background: #7fb6df;
+	color: #fff;
+	font-size: 10px;
+	margin-left: 220px;
+}
+.thirteen .rightDetail .i2{
+	overflow: hidden;
+}
+.thirteen .rightDetail .i2 .inutspanBox{
+	float: right;
+	width: 156px;
+}
+.thirteen em .i2 input{
+	width: 100%;
+}
+.thirteen #subt{
+	width: 54px;
+    height: 20px;
+    border-top: 1px solid #7fc0e9;
+    border-bottom: 1px solid #7fc0e9;
+    float: right;
+    display: block;
+    line-height: 20px;
+    color: #fff;
+    background: #7fc0e9;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.three .rightDetail #up1P,#up2P{
+	height: 30px;
+	margin-left: 177px;
+	margin-top: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	width: 485px;
+	font-size: 14px;
+}
+#up13P{
+	height: 30px;
+	margin-top: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 14px;
+}
+.rightDetail{
+	width: 850px;
+}
+#up1P i,#up2P i,#up13P i{
+	position: relative;
+	display: inline;
+	margin-right: 15px;
+}
+.three .rightDetail em{
+	width: 650px;
+}
+.three .rightDetail .baiNow{
+	width:50px;
+	margin-top:0;
+	color: #707070;
+}
+.three .i8{
+	margin-top: 10px;
+}
+#mask{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: transprent;
+	height: 200px;
+	z-index: 10;
+}
+.nine .rightDetail em a{
+	font-size: 14px;
+}
+
+#up1P i img,#up2P i img,#up13P i img{
+	position: absolute;
+	display: block;
+	width: 15px;
+	height: 15px;
+	right: -15px;
+	top: 0;
+	cursor: pointer;
+	z-index: 2;
+}
+
+
+
+/*====================上传文件样式======================= */
+#threeForm{
+	position:relative;
+}
+.uploadBox{
+	width: 320px;
+	height: 48px;
+	background: #f5f5f5;
+	border: 3px solid #e5e5e5;
+	position: absolute;
+	right: -100px;
+	top: 20px;
+	z-index:111;
+	display: none;
+}
+.uploadBox .up{
+	font-size: 10px;
+	color: #707070;
+	width: 304px;
+	margin: 0 auto;
+	overflow: hidden;
+	margin-top: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.uploadBox .up span{
+	float: left;
+	margin-right: 20px;
+}
+.uploadBox .up em{
+	float: left;
+}
+.uploadBox .up i{
+	float: right;
+	cursor: pointer;
+	margin-right: 15px;
+}
+.uploadBox .down{
+	width: 304px;
+	height: 3px;
+	margin: 0 auto;
+	background: #fff;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.uploadBox .downCenter{
+	display: block;
+	width: 0;
+	height: 100%;
+	background: #0099ff;
+}

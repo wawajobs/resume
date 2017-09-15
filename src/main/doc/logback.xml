@@ -1,0 +1,40 @@
+<configuration scan="true">
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+       <encoder>  
+            <pattern>%date [%thread] %-5level %logger{36} - %msg%n  
+            </pattern>  
+        </encoder>  
+    </appender>
+    
+    <appender name="file"  
+        class="ch.qos.logback.core.rolling.RollingFileAppender">  
+        <Encoding>UTF-8</Encoding>  
+        <File>/home/lishuai2017/Maildir/wawajobs/apache-tomcat-7.0.78/logs/resume.log</File>  
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">  
+            <FileNamePattern>resume-%d{yyyy-MM-dd}.log  
+            </FileNamePattern>  
+            <MaxHistory>10</MaxHistory>  
+            <TimeBasedFileNamingAndTriggeringPolicy  
+                class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">  
+                <MaxFileSize>5MB</MaxFileSize>  
+            </TimeBasedFileNamingAndTriggeringPolicy>  
+        </rollingPolicy>  
+        <layout class="ch.qos.logback.classic.PatternLayout">  
+            <pattern>%date [%thread] %-5level %logger{36} - %msg%n  
+            </pattern>  
+        </layout>  
+    </appender>  
+
+    <category name="org.springframework.security">
+        <priority value="INFO" />
+    </category>
+    <category name="com.resume.spring.security">
+        <priority value="DEBUG" />
+    </category>
+    
+
+    <root level="DEBUG">
+        <appender-ref ref="console" />
+        <appender-ref ref="file" />
+    </root>
+</configuration>

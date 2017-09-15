@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:websocket="http://www.springframework.org/schema/websocket"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/websocket http://www.springframework.org/schema/websocket/spring-websocket-4.2.xsd 
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+		
+	<context:property-placeholder location="classpath:*.properties" file-encoding="UTF-8"/>
+			
+	<!-- 扫描service包下所有的类型 -->
+	<context:component-scan base-package="com.resume.service"></context:component-scan>
+	
+	<bean id="mailSender" class="com.resume.common.MailSender">
+		<property name="host" value="${mailHost}"></property>
+		<property name="user" value="${mailUser}"></property>
+		<property name="pwd" value="${mailPwd}"></property>
+	</bean>
+	
+	<bean id="propertyHolder" class="com.resume.files.BaseFile.PropertyHolder"></bean>
+
+</beans>

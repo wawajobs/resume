@@ -1,0 +1,84 @@
+
+table.dataTable {
+	width:100%;
+	border-left: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+	border-top: 1px solid #e4e4e4;
+	line-height: 22px;
+	color: #666666;
+}
+
+
+table.dataTable th,td {
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+
+table.dataTable th.dataTableHeader {
+	border-right: 1px solid #cfddfe;
+	border-bottom: 1px solid #cfddfe;
+
+	/* color: #444; */
+	text-align: center;
+	background: rgb(235, 243, 252);
+    font-weight: bold;
+    height: 40px;
+}
+
+table.dataTable tr.odd_row {
+	border-right: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+	height: 40px;
+	line-height: 40px;
+	color: #555;
+	background: #fff;
+	text-align: center;
+}
+
+table.dataTable tr.even_row {
+	border-right: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+	height: 40px;
+	line-height: 40px;
+	color: #555;
+	background: #f7f5f2;
+	text-align: center;
+}
+
+
+@charset "utf-8";
+
+.PagerView {
+	font-size: 12px;
+	font-family: tahoma, arial;
+	color: #333;
+	text-align: center;
+	padding: 8px;
+	line-height: 100%;
+}
+
+.PagerView span {
+	color: #999;
+	margin: 0 1px;
+	padding: 3px 6px;
+	border: 1px solid #ccc;
+}
+
+.PagerView span.on {
+	color: #fff;
+	font-weight: bold;
+	border: 1px solid #666;
+	background: #39f;
+}
+
+.PagerView a {
+	color: #00f;
+	text-decoration: none;
+}
+
+.PagerView a span {
+	color: #33f;
+	border: 1px solid #66c;
+}

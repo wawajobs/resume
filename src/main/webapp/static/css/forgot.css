@@ -1,0 +1,225 @@
+/*-------------------------------------base-重置部分--------------------------------------------*/
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{font-size:62.5%; font-family:"微软雅黑";}
+em,i{font-style: normal;}
+
+/*-------------------------------------页面部分--------------------------------------------*/
+body,html{
+	width: 100%;
+	height: 100%;
+}
+
+/*现在只有pc版的*/
+.box{
+	width: 100%;
+	height: 100%;
+	background: url(../img/back1.png) no-repeat center;
+	background-size: 100% 100%;
+	position: relative;
+	overflow: hidden;
+}
+/*导航条*/
+.nav{
+	position: absolute;
+	left: 0;
+	top: 38px;
+	background: url(../img/nav.png) no-repeat left top;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+.nav a{
+	color: #63d5c8;
+	font-size: 18px;
+	padding-top: 10px;
+	padding-bottom: 16px;
+	display: block;
+	float: left;
+}
+.nav .homeA{
+	padding-left: 40px;	
+}
+.nav .loginA{
+	padding-right: 70px;
+}
+
+
+/*登录表单*/
+.loginBox{
+	width: 33%;
+	height: 74%;
+	border: 1px solid #abdcd6;
+	margin: 0 auto;
+	/*margin-top: 6.6%;*/	
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px #999;
+}
+.loginBox .title{
+	width: 78%;
+	text-align: center;
+	color: #63d5c8;
+	font-size: 24px;
+	margin: 0 auto;
+	margin-top: 13.5%;
+	padding-bottom:38px;
+}
+.loginBox #email{
+	display: block;
+	width: 75%;
+	outline: none;
+	border: 1px solid #e3e7ed;
+	height: 39px;
+	margin: 0 auto;
+	margin-bottom: 28px;
+	padding-left: 10px;
+}
+::-webkit-input-placeholder{
+	color: #c3c6cd;
+	font-size: 15px;
+}
+.loginBox #sub{
+	width: 78%;
+	background: #63d4c8;
+	display: block;
+	outline: none;
+	border: 0;
+	height: 44px;
+	color: #fff;
+	font-size: 16px;
+	margin: 0 auto;
+	margin-bottom: 35px;
+	cursor: pointer;
+}
+.loginBox .more{
+	width: 100%;
+	text-align: center;
+}
+.loginBox .more .leftA{
+	color: #9fa3af;
+	font-size: 12px;
+}
+.loginBox .more .rightA{
+	color: #63d4c8;
+	font-size: 12px;
+	margin-left: 10px;
+}
+.sure{
+	width: 78%;
+	border: 1px solid #e3e7ed;
+	height: 39px;
+	margin: 0 auto;
+	margin-bottom: 28px;
+	overflow: hidden;
+    box-sizing: border-box;
+}
+.sure input{
+	padding-left: 10px;
+	display: block;
+	float: left;
+	height: 100%;
+	border: none;
+	outline: none;
+}
+.sure #sureMaImg{
+	display: block;
+	width: 28%;
+	height: 100%;
+	float: right;
+	background: pink;
+}
+/*下边是forgot独有的*/
+.sure2{
+	margin-bottom: 57px;
+}
+.headBox{
+	width: 100%;
+	height: 20%;
+}
+.headBoxCenter{
+	width: 33%;
+	height: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.centerUp{
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	margin-top: 10%;
+}
+.centerUp span{
+	font-size: 34px;
+}
+.centerUp .upL{
+	font-family: "Hei regular";
+	color: #ed6c65;
+	font-weight: 600;
+	float: left;
+	margin-left: 6%;
+}
+.centerUp em{
+	display: block;
+	font-style: normal;
+	float: left;
+	width: 60%;
+	height: 1px;
+	border-bottom: 1px solid #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.centerUp .upR{
+	font-family: "Hei regular";
+	font-weight: 600;
+	color: #fff;
+	float: right;
+	margin-right: 6%;
+}
+.centerDown{
+	overflow: hidden;
+}
+.centerDown .downL{
+	color: #ed6c65;
+	font-size: 14px;
+	float: left;
+}
+.centerDown .downR{
+	color: #fff;
+	font-size: 14px;
+	float: right;
+}
+.sure2 #sureMaImg{
+	background: transparent;
+	font-size: 15px;
+	text-align: center;
+	height: 21px;
+	border-left: 1px solid #e3e7ed;
+	line-height: 20px;
+	color: #63d4c8;
+	margin-top: 8px;
+	cursor: pointer;
+}
+
+#sureMaImg #imgObj{
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+/* 错误提示 */
+.wrong{
+	color:red;
+	font-size:14px;
+	width:100%;
+	text-align:center;
+	margin: 10px 0;
+}
+
+
+

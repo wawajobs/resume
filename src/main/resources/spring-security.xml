@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans:beans xmlns="http://www.springframework.org/schema/security" 
+xmlns:beans="http://www.springframework.org/schema/beans" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd 
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd">  
+
+  <!--登录页面不过滤 -->
+	<http pattern="/*.ico*" security="none" />
+	<http pattern="/static/**/*" security="none" />
+	<http pattern="/public/**/*" security="none" />
+	<http pattern="/feedback/add" security="none" />
+
+	<http pattern="/400.jsp*" security="none" />
+	<http pattern="/500.jsp*" security="none" />
+	<http pattern="/accessDenied.jsp*" security="none" />
+	<http pattern="/login.jsp" security="none" />
+	<http pattern="/index.jsp" security="none" />
+	<http pattern="/register.jsp" security="none" />
+	<http pattern="/file/*" security="none" />
+	
+	<http pattern="/view/index.html" security="none" />
+	
+    <http create-session="always" 
+          use-expressions="true"  disable-url-rewriting="true" entry-point-ref="loginUrlAuthenticationEntryPoint">
+		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
+		  <logout
+		    logout-success-url="/login.jsp"
+		    logout-url="/logout"
+		    invalidate-session="true"
+		  />
+		  <csrf disabled="true" />
+		  <custom-filter ref="verifyFilter" before="FORM_LOGIN_FILTER"/>
+	</http>
+	
+	<beans:bean id="verifyFilter" class="com.resume.spring.security.VerifyAuthenticationFilter">  
+	    <beans:property name="authenticationManager"  ref="authenticationManager"></beans:property>  
+	    <beans:property name="authenticationSuccessHandler">  
+	        <beans:bean id="savedRequestAwareAuthenticationSuccessHandler" class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">  
+	            <beans:property name="defaultTargetUrl" value="/interview/page"></beans:property>  
+	            <beans:property name="alwaysUseDefaultTargetUrl" value="true"></beans:property>  
+	        </beans:bean>  
+	    </beans:property>  
+	    <beans:property name="authenticationFailureHandler">  
+	        <beans:bean id="simpleUrlAuthenticationFailureHandler" class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">  
+	            <beans:property name="defaultFailureUrl" value="/login.jsp?login_error=1"></beans:property>  
+	        </beans:bean>  
+	    </beans:property>  
+	    <beans:property name="filterProcessesUrl" value="/login" />
+	</beans:bean> 
+
+    <authentication-manager alias="authenticationManager">
+		<authentication-provider user-service-ref="userService">
+			<password-encoder hash="md5" ref="passwordEncoder">
+				<salt-source user-property="username" />
+			</password-encoder>
+		</authentication-provider>
+	</authentication-manager>
+	
+	<beans:bean id="userService" class="com.resume.spring.security.SecurityHibernateDaoImpl" />
+	
+	<beans:bean id="loginUrlAuthenticationEntryPoint"
+		class="com.resume.spring.security.CustomLoginUrlAuthenticationEntryPoint">
+		<beans:constructor-arg name="loginFormUrl" value="/login.jsp"></beans:constructor-arg>
+		<beans:property name="forceHttps" value="false" />
+	</beans:bean>
+	
+	<beans:bean id="passwordEncoder"
+		class="com.resume.spring.security.StandardPasswordEncoder" />  
+ 
+ </beans:beans>
