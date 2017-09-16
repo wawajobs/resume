@@ -122,12 +122,12 @@ var interview = {
 		    }
 		});
 	},
-	list : function(fillTable){
+	list : function(col,sort,page,size,fillTable){
 		$.ajax({
 			url: interview.baseUrl+interview.URL.list,
 			type:"post",
 			dataType:"json",
-			data:{step:interview.currentStep},
+			data:{step:interview.currentStep,col:col,order:sort,page:page,size:size},
 			success : function(data){
 				if(data.status == 1){
 					var fileMap = new Map();
@@ -135,7 +135,7 @@ var interview = {
 					var datas = new Array();
 					for (var i = 0; i < data.data.length; i++) {
 						var interview = data.data[i];
-						list.header=new Array("Name","<span >Age</span>","Gender","Skype","Email address",
+						list.header=new Array("Name","<i class='name'>Age<span ></span></i>","Gender","Skype","Email address",
 								"Citizenship","Education","Education country",
 								"Resume","Video","Message","Backward","Forward","");
 						

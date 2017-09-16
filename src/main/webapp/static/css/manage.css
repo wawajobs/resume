@@ -122,3 +122,23 @@ body,html{
     padding: 5px 5px 5px 5px;
 }
 
+.name{
+	color: blue;
+    cursor: pointer;
+}
+
+.name span{
+	display: block;
+    float: right;
+    width: 5px;
+    height: 50%;
+    margin-top: 5%;
+    margin-right: 5%;
+    background: url(../img/up.png) no-repeat center;
+    background-size: 100% 100%;
+}
+.name .down{
+	background: url(../img/down_tb.png) no-repeat center;
+	background-size: 100% 100%;
+}
+

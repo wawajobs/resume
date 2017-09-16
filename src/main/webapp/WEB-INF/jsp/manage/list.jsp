@@ -22,26 +22,49 @@ var list=new QueryList("line_list","");
 	
 	$(function(){
 		interview.baseUrl = "${pageContext.request.contextPath }/";
-		list.header=new Array("Name","<span id='thAge' class='thorder'>Age</span>",
-				"<span id='thgender' class='thorder'>Gender</span>","Skype","Email address",
-				"<span id='thcitizenship' class='thorder'>Citizenship</span>",
-				"<span id='theducation' class='thorder'>Education</span>","Education country",
+		list.header=new Array("Name","<i id='thAge' class='name' col='age'>Age<input type='radio' name='sort' style='display:none;'/></i>",
+				"<i id='thgender' class='name'  col='gender'>Gender<input type='radio' name='sort' style='display:none;'/></i>","Skype","Email address",
+				"<i id='thcitizenship' class='name'  col='citizenship'>Citizenship<input type='radio' name='sort' style='display:none;'/></i>",
+				"<i id='theducation' class='name' col='education'>Education<input type='radio' name='sort' style='display:none;'/></i>","Education country",
 				"Resume","Video","Message","Backward","Forward","");
 		
 		list.fill=false;
-	    list.getData = function (){
-	    	interview.list(fillTable);
+	    list.getData = function (col,sort,page,size){
+	    	interview.list(col,sort,page,size,fillTable);
 		
 		}; 
 		list.createTable();
-		list.getData();
+		list.getData(null,null,null,null);
 		
 		$(".left").on('click','li',function(){
 			$(".left li").removeClass("sel");
 			$(this).addClass("sel");
 			interview.currentStep = $(this).attr("value");
-			interview.list(fillTable);
+			interview.list(null,null,null,null,fillTable);
 		});
+		
+		$("#line_list").on('click','.name',function(){
+			//找到当前列的单选input
+			var radio = $(this).find('input');
+			//获取当前排序规则
+			var checked = radio.attr('checked');
+			$("#line_list .name").find('span').remove();
+			$("#line_list .name").find('input').attr('checked',false);
+			var span = $('<span></span>');
+			$(this).append(span);
+			if(checked){
+				span.addClass('down');
+			}
+			var sort = 'asc';
+			if(checked){
+				radio.attr('checked',false);
+				sort = 'desc';
+			}else{
+				radio.attr('checked',true);
+				sort = 'asc';
+			}
+			list.getData($(this).attr("col"),sort);
+		})
 		
 		//生日
 		layui.use('laydate', function(){

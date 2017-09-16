@@ -66,10 +66,10 @@
 		inner join t_resume_info r on f.resume_id = r.id 
 		where step=#{step}
 		<if test="col != null and col != ''">
-			order by #{col} #{order}
+			order by ${col} ${order}
 		</if>
 		<if test="beginIndex != null and beginIndex !='' ">
-			limit beginIndex,size
+			limit #{beginIndex},#{size}
 		</if>
 		
 		
