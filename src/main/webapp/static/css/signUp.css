@@ -151,13 +151,14 @@ body,html{
 		padding-left: 26px;	
 		background: url(../img/nav.png) no-repeat left top;
 		background-size: 100% 100%;
-		padding-right: 28px;
+		padding-right: 14px;
 	}
 	.nav .loginA{
 		padding-right: 23px;
 		background: url(../img/jianMiddle.png) no-repeat center;
 		background-size: 100% 100%;
-		padding-left: 30px;
+		padding-left: 35px;
+		margin-left: -10px;
 	}
 	
 	/*登录表单*/
