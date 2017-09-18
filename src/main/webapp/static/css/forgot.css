@@ -12,6 +12,7 @@ em,i{font-style: normal;}
 body,html{
 	width: 100%;
 	height: 100%;
+	font-size: 12px;
 }
 
 /*现在只有pc版的*/
@@ -27,31 +28,46 @@ body,html{
 @media screen and (min-width: 769px){ 
 	/*导航条*/
 	.nav{
-			position: absolute;
-			left: 0;
-			top: 38px;
-			overflow: hidden;
-		}
-		.nav a{
-			color: #495764;
-			font-size: 18px;
-			padding-top: 8px;
-			padding-bottom: 8px;
-			display: block;
-			float: left;
-		}
-		.nav .homeA{
-			padding-left: 26px;	
-			background: url(../img/nav.png) no-repeat left top;
-			background-size: 100% 100%;
-			padding-right: 28px;
-		}
-		.nav .loginA{
-			padding-right: 23px;
-			background: url(../img/jianMiddle.png) no-repeat center;
-			background-size: 100% 100%;
-			padding-left: 40px;
-		}
+		position: absolute;
+		left: 0;
+		top: 38px;
+		overflow: hidden;
+	}
+	.nav a{
+		color: #63d5c8;
+		font-size: 18px;
+		display: block;
+		float: left;
+		height: 40px;
+		line-height: 40px;
+	}
+	.nav .homeA{
+		padding: 0;
+		overflow: hidden;
+	}
+	.nav .loginA{
+		padding: 0;
+		overflow: hidden;
+	    margin-left: -10px;
+		
+	}
+	.nav .loginA span,.nav .homeA span{
+		float: left;
+		background: #fff;
+		height: 40px;
+		line-height: 40px;
+		padding-left: 10px;
+	}
+	.nav .loginA img,.nav .homeA img{
+		float: left;
+		height: 40px;
+	}
+	.loginA .leftImg{
+		width: 20px;
+	}
+	.loginA .rightImg,.homeA .rightImg{
+		width: 20px;
+	}
 	
 	
 	/*登录表单*/
@@ -230,31 +246,47 @@ body,html{
 @media screen and (max-width: 768px){
 	/*导航条*/
 	.nav{
-			position: absolute;
-			left: 0;
-			top: 0.2rem;
-			overflow: hidden;
-		}
-		.nav a{
-			color: #495764;
-			font-size: 0.16rem;
-			padding-top: 8px;
-			padding-bottom: 8px;
-			display: block;
-			float: left;
-		}
-		.nav .homeA{
-			padding-left: 0.1rem;	
-			background: url(../img/nav.png) no-repeat left top;
-			background-size: 100% 100%;
-			padding-right: 28px;
-		}
-		.nav .loginA{
-			padding-right: 23px;
-			background: url(../img/jianMiddle.png) no-repeat center;
-			background-size: 100% 100%;
-			padding-left: 40px;
-		}
+		position: absolute;
+		left: 0;
+		top: 20px;
+		overflow: hidden;
+	}
+	.nav a{
+		color: #63d5c8;
+		font-size: 18px;
+		display: block;
+		float: left;
+		height: 40px;
+		line-height: 40px;
+	}
+	.nav .homeA{
+		padding: 0;
+		overflow: hidden;
+	}
+	.nav .loginA{
+		padding: 0;
+		overflow: hidden;
+	    margin-left: -10px;
+		
+	}
+	.nav .loginA span,.nav .homeA span{
+		float: left;
+		background: #fff;
+		height: 40px;
+		line-height: 40px;
+		padding-left: 10px;
+	}
+	.nav .loginA img,.nav .homeA img{
+		float: left;
+		height: 40px;
+	}
+	.loginA .leftImg{
+		width: 20px;
+	}
+	.loginA .rightImg,.homeA .rightImg{
+		width: 20px;
+		margin-left: -1px;
+	}
 	
 	
 	/*登录表单*/

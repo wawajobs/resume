@@ -69,7 +69,15 @@
 		<div class="box">
 			<!--导航条-->
 			<div class="nav">
-				<a href="${pageContext.request.contextPath}/view/index.html" class="homeA">Home</a><a href="login.jsp" class="loginA">Forgot password</a>
+				<a href="${pageContext.request.contextPath}/view/index.html" class="homeA">
+					<span>Home</span>
+					<img class="rightImg"  src="../../static/img/jianMiddleRight.png"/>
+				</a>
+				<a href="login.jsp" class="loginA">
+					<img class="leftImg" src="../../static/img/jianMiddleLeft.png"/>
+					<span>Forgot password</span>
+					<img class="rightImg"  src="../../static/img/jianMiddleRight.png"/>
+				</a>
 			</div>
 			
 			<!--表单前边的导航-->
