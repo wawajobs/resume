@@ -33,26 +33,40 @@ body,html{
 		overflow: hidden;
 	}
 	.nav a{
-		color: #63d5c8;
+		color: #69bbe6;
 		font-size: 18px;
-		padding-top: 8px;
-		padding-bottom: 8px;
 		display: block;
 		float: left;
+		height: 40px;
+		line-height: 40px;
 	}
 	.nav .homeA{
-		padding-left: 26px;	
-		background: url(../img/nav.png) no-repeat left top;
-		background-size: 100% 100%;
-		padding-right: 28px;
+		padding: 0;
+		overflow: hidden;
 	}
 	.nav .loginA{
-		padding-right: 23px;
-		background: url(../img/jianMiddle.png) no-repeat center;
-		background-size: 100% 100%;
-		padding-left: 47px;
+		padding: 0;
+		overflow: hidden;
+	    margin-left: -10px;
+		
 	}
-	
+	.nav .loginA span,.nav .homeA span{
+		float: left;
+		background: #fff;
+		height: 40px;
+		line-height: 40px;
+		padding-left: 10px;
+	}
+	.nav .loginA img,.nav .homeA img{
+		float: left;
+		height: 40px;
+	}
+	.loginA .leftImg{
+		width: 20px;
+	}
+	.loginA .rightImg,.homeA .rightImg{
+		width: 20px;
+	}
 	.tit{
 		width: 100%;
 		text-align: center;
@@ -365,24 +379,41 @@ body,html{
 		overflow: hidden;
 	}
 	.nav a{
-		color: #69c3ee;
-	    font-size: 0.15rem;
-	    padding-top: 0.05rem;
-	    padding-bottom: 0.05rem;
-	    display: block;
-	    float: left;
+		color: #69bbe6;
+		font-size: 18px;
+		display: block;
+		float: left;
+		height: 40px;
+		line-height: 40px;
 	}
 	.nav .homeA{
-		background: url(../img/nav.png) no-repeat left top;
-		background-size: 100% 100%;
-		padding-right: 28px;
-		padding-left: 0.15rem;	
+		padding: 0;
+		overflow: hidden;
 	}
 	.nav .loginA{
-		background: url(../img/jianMiddle.png) no-repeat center;
-		background-size: 100% 100%;
-		padding-left: 30px;
-		padding-right: 0.3rem;
+		padding: 0;
+		overflow: hidden;
+	    margin-left: -10px;
+		
+	}
+	.nav .loginA span,.nav .homeA span{
+		float: left;
+		background: #fff;
+		height: 40px;
+		line-height: 40px;
+		padding-left: 10px;
+	    margin-left: -1px;
+	}
+	.nav .loginA img,.nav .homeA img{
+	    margin-left: -1px;
+		float: left;
+		height: 40px;
+	}
+	.loginA .leftImg{
+		width: 20px;
+	}
+	.loginA .rightImg,.homeA .rightImg{
+		width: 20px;
 	}
 	.tit{
 		width: 100%;

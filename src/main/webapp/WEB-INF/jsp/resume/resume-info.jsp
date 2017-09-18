@@ -19,7 +19,15 @@
 		<div class="box">
 			<!--导航条-->
 			<div class="nav">
-				<a href="${pageContext.request.contextPath}/view/index.html" class="homeA">Home</a><a href="#" class="loginA">Personal information</a>
+				<a href="${pageContext.request.contextPath}/view/index.html" class="homeA">
+					<span>Home</span>
+					<img class="rightImg"  src="../../../static/img/jianMiddleRight.png"/>
+				</a>
+				<a href="#" class="loginA">
+					<img class="leftImg" src="../../../static/img/jianMiddleLeft.png"/>
+					<span>Personal information</span>
+					<img class="rightImg"  src="../../../static/img/jianMiddleRight.png"/>
+				</a>
 			</div>
 			<p class="tit">Personal information</p>
 			<!--表单详情-->
