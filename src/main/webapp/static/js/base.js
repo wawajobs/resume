@@ -1,7 +1,4 @@
 
-var Base = {
-		url : "http://localhost:8080/resume"
-};
 
 //rem
 (function (doc, win) {

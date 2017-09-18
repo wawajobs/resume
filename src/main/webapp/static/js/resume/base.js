@@ -1,6 +1,6 @@
 
 var Base = {
-		url : "http://localhost:8080/resume"
+		url : "http://wawajobschina.com/resume"
 };
 
 //rem

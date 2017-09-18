@@ -6,6 +6,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ThreadPoolExecutor;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,6 +28,9 @@ public class FeedbackController extends AbstractController{
 	@Autowired
 	private MailSender mailSender;
 	
+	@Value("${feedbackEmail}")
+	private String feedbackEmail;
+	
 //	private ExecutorService executor = new ThreadPoolExecutor(5);
 	
 	@ResponseBody
@@ -42,7 +46,7 @@ public class FeedbackController extends AbstractController{
 		feedback.setCreateTime(new Date());
 		feedbackService.saveFeedback(feedback);
 		
-		mailSender.sendMail("lishuai3345@126.com", title, message + "\n from:"+email);
+		mailSender.sendMail(feedbackEmail, title, message + "\n from:"+email);
 		return resp.success(BaseResponse.SUCCESS_MESSAGE);
 	}
 	

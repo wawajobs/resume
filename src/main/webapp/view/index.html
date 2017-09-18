@@ -475,7 +475,10 @@
 					data : {name:name,email:email,title:title,message:message},
 					success : function(data){
 						if(data.status == 1){
-							$("#contactForm").reset();
+							$("#name").val("");
+							$("#email").val("");
+							$("#title").val("");
+							$("#message").val("");
 							alert("thank you for your message");
 						}else{
 							alert(data.message);
