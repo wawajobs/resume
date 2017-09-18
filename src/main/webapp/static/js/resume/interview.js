@@ -1,13 +1,13 @@
 
 Date.prototype.Format = function (fmt) { //author: lishuai 
 	    var o = {
-	        "M+": this.getMonth() + 1, //月份 
-	        "d+": this.getDate(), //日 
-	        "h+": this.getHours(), //小时 
-	        "m+": this.getMinutes(), //分 
-	        "s+": this.getSeconds(), //秒 
-	        "q+": Math.floor((this.getMonth() + 3) / 3), //季度 
-	        "S": this.getMilliseconds() //毫秒 
+	        "M+": this.getMonth() + 1, //閺堝牅鍞� 
+	        "d+": this.getDate(), //閺冿拷 
+	        "h+": this.getHours(), //鐏忓繑妞� 
+	        "m+": this.getMinutes(), //閸掞拷 
+	        "s+": this.getSeconds(), //缁夛拷 
+	        "q+": Math.floor((this.getMonth() + 3) / 3), //鐎涳絽瀹� 
+	        "S": this.getMilliseconds() //濮ｎ偆顫� 
 	    };
 	    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
 	    for (var k in o)
@@ -112,6 +112,17 @@ var interview = {
 						$("#up13").val(new Date(flow.flightDate).Format("yyyy-MM-dd"));
 						
 					}
+					
+					if(step < classAry.length){
+						var doo=0;
+						var winHeight=document.body.scrollHeight;//鎬婚珮
+						var nowStepHeight=parseInt($('.' + classAry[step]).next('div').next('div').offset().top-20);
+						var nowMaskHeight=winHeight-nowStepHeight;
+//					console.log(nowMaskHeight);
+						$('#mask').height(nowMaskHeight);
+					}
+					
+					proccessStatus(step);
 					
 				}else{
 					alert(data.message);
@@ -469,8 +480,11 @@ function showMoreInfo(resumeId,step){
 function proccessStatus(step){
 	switch (step) {
 	case 1:
-		
-		;
+		$("#up1Label").css("background","#999");
+		$("#uploadVideoBtn").css("background","#999");
+		$("#up2Label").css("background","#999");
+		$("#uploadCerBtn").css("background","#999");
+		$("#finishUpload").css("background","#999");
 	case 2:
 		
 		;
@@ -487,8 +501,9 @@ function proccessStatus(step){
 		
 		;
 	case 7:
+		$("#nineAcceptBtn").css("background","#999");
+		$("#nineDeclineBtn").css("color","#999");
 		
-		;
 	case 8:
 		
 		;
@@ -497,8 +512,16 @@ function proccessStatus(step){
 		;
 	case 10:
 		
+		$("#up12").css("background","#999");
+		$(".twelve .i2 span").css("background","#999");
 		;
 	case 11:
+		$("#up13label").css("background","#999");
+		$("#up13File").css("background","#999");
+		
+		$("#up13").css("background","#999");
+		$("#up13Place").css("background","#999");
+		$("#subt").css("background","#999");
 		
 		;
 	case 12:

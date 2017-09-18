@@ -443,7 +443,7 @@
 						<em>
 							<i>Waiting for the job offer</i>
 							<i class="i2"></i>
-							<input type="button" name="" onclick="accepted(1,${resumeId});" id="" value="Accept the job offer" /><a href="javascript:void(0);" onclick="accepted(0,${resumeId});">Decline</a>
+							<input type="button" name="" onclick="accepted(1,${resumeId});" id="nineAcceptBtn" value="Accept the job offer" /><a href="javascript:void(0);" id="nineDeclineBtn" onclick="accepted(0,${resumeId});">Decline</a>
 						</em>
 					</div>
 				</div>
@@ -502,7 +502,7 @@
 						<em>
 							<i>Determine China arrival date</i>
 							<input type="hidden" name="resumeId" value="${resumeId }"/>
-							<i class="i2"><i class="i22">Fight ticket image upload</i><span class="inutspanBox"><input type="file" name="flightTicket" id="up13Input" value="upload" /><label id="up13label" for="up13Input"></label><span onclick="uploadFlightFile();">upload</span></span></i>
+							<i class="i2"><i class="i22">Fight ticket image upload</i><span class="inutspanBox"><input type="file" name="flightTicket" id="up13Input" value="upload" /><label id="up13label" for="up13Input"></label><span id="up13File" onclick="uploadFlightFile();">upload</span></span></i>
 							<p id="up13P"></p>
 							<i class="i2 i3"><i class="i21">Fight landing place</i><span class="inutspanBox"><input type="text" name="" id="up13Place" value="" /></span></i>
 							<i class="i2 i3"><i class="i21">Fight landing date</i><span class="inutspanBox"><input type="text" name="" id="up13" value="" /></span></i>
