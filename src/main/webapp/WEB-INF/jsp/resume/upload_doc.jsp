@@ -5,8 +5,10 @@
 	<head>
 		<%@include file="/WEB-INF/jsp/common/head.jsp"%>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 		<title>Upload</title>
 		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/static/css/upload.css"/>
+		<script src="../../../static/js/base.js"></script>
 		<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/jquery/jquery-3.0.0.js"></script>
 		<script src="${pageContext.request.contextPath }/static/js/resume/upload.js"></script>
 		<script type="text/javascript">
