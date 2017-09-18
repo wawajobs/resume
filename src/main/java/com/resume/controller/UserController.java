@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.resume.common.Constant;
 import com.resume.common.MailSender;
 import com.resume.enums.BaseRoleType;
 import com.resume.response.BaseResponse;
@@ -127,7 +128,7 @@ public class UserController {
 			if(!emailVerifyCode.equalsIgnoreCase(code)){
 				return new BaseResponse().fail("email verification code error");
 			}
-			String sessionVerifyCode = (String)session.getAttribute("verifyCode");
+			String sessionVerifyCode = (String)session.getAttribute(Constant.SESSION_GENERATED_VERIFY_KEY);
 			if(!verifyCode.equals(sessionVerifyCode)){
 				return new BaseResponse().fail("verification code error");
 			}
@@ -158,7 +159,7 @@ public class UserController {
 				return resp.fail("email verification code error");
 			}
 			
-			String vcode = (String)session.getAttribute("verifyCode");
+			String vcode = (String)session.getAttribute(Constant.SESSION_GENERATED_VERIFY_KEY);
 			if(!verifyCode.equalsIgnoreCase(vcode)){
 				return new BaseResponse().fail("verification code error");
 			}

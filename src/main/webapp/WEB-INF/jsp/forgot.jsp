@@ -13,6 +13,10 @@
 	<title>sign in</title>
 	<script>
 	
+	$(function(){
+		user.baseUrl = "${pageContext.request.contextPath }";
+	});
+	
 	// 刷新图片  
     function changeImg() {  
         var imgSrc = $("#imgObj");  
@@ -32,7 +36,11 @@
 		var email = $("#email").val() ;
 		var verifyCode = $("#verifyCode").val() ;
 		var emailCode = $("#emailCode").val() ;
-		if(verifyCode == ""){
+		if(email == ""){
+			$("#errorSpan").html("Please fill in the email");
+			return ;
+			
+		}else if(verifyCode == ""){
 			$("#errorSpan").html("Please fill in the verification code");
 			return ;
 		}else if(emailCode == ""){
@@ -42,6 +50,16 @@
 		
 		user.checkVerifyCode(email, verifyCode, emailCode);
 	}
+	
+	function sendCode(){
+		var email = $("#email").val();
+		if(email == ""){
+			$("#errorSpan").html("Please fill in the email");
+			return ;
+		}
+		user.sendVerifyCode(email);
+	}
+	
 	function fun_reset(){
 		document.f.reset();
 	}
@@ -105,7 +123,7 @@
 					</div> 
 					<div class="sure sure2">
 						<input type="text" name="emailCode" id="emailCode" value="" placeholder="Verification code" required="required"/>
-						<span id="sureMaImg">send</span>
+						<span id="sureMaImg" onclick="sendCode();">send</span>
 					</div>
 					<p class="wrong"><span>&nbsp;</span><span id="errorSpan"></span></p>
 					<input type="button" onclick="fun_submit();" name="" id="sub" value="Reset Password"  required="required"/>

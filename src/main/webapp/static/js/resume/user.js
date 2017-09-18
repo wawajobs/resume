@@ -71,14 +71,19 @@
 				});
 			},
 			
-			sendVerifyCode : function(){
+			sendVerifyCode : function(email){
 				$.ajax({
 					url: user.baseUrl+user.URL.sendVerifyCode,
 					type:"post",
 					dataType:"json",
-					data:{},
+					data:{email:email},
 					success : function(data){
-						
+						if(data.status == 1){
+							alert("Verify code sent successfully");
+						}else{
+							alert("Failed to send verification code");
+							
+						}
 					},
 					error: function(XMLHttpRequest, textStatus, errorThrown) {
 						 alert(XMLHttpRequest.status+"-"+XMLHttpRequest.readyState + "-" + textStatus);
@@ -94,7 +99,8 @@
 					data:{email:email,verifyCode:verifyCode,emailVerifyCode:emailCode},
 					success : function(data){
 						if(data.status == 1){
-							window.location.href = user.baseUrl+"/public/user/reset/page";
+							window.location.href = user.baseUrl+"/public/user/reset/page?email="+
+								email+"&verifyCode="+verifyCode+"&emailVerifyCode="+emailCode;
 						}else{
 							$("#errorSpan").html(data.message);
 						}

@@ -44,7 +44,7 @@
 			$("#errorSpan").html("");
 			return;
 		}
-		
+		user.baseUrl="${pageContext.request.contextPath}";
 		user.resetPwd(email, pwd,verifyCode,emailVerifyCode);
 	}
 	function fun_reset(){
