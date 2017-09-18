@@ -44,13 +44,14 @@ body,html{
 		padding-left: 26px;	
 		background: url(../img/nav.png) no-repeat left top;
 		background-size: 100% 100%;
-		padding-right: 28px;
+		padding-right: 10px;
 	}
 	.nav .loginA{
 		padding-right: 23px;
 		background: url(../img/jianMiddle.png) no-repeat center;
 		background-size: 100% 100%;
-		padding-left: 30px;
+		padding-left: 25px;
+		margin-left: -10px;
 	}
 	
 	
@@ -178,7 +179,7 @@ body,html{
 	.nav{
 		position: absolute;
 		left: 0;
-		top: 0.25rem;
+		top: 38px;
 		overflow: hidden;
 	}
 	.nav a{
@@ -193,13 +194,14 @@ body,html{
 		padding-left: 26px;	
 		background: url(../img/nav.png) no-repeat left top;
 		background-size: 100% 100%;
-		padding-right: 28px;
+		padding-right: 10px;
 	}
 	.nav .loginA{
 		padding-right: 23px;
 		background: url(../img/jianMiddle.png) no-repeat center;
 		background-size: 100% 100%;
-		padding-left: 30px;
+		padding-left: 25px;
+		margin-left: -10px;
 	}
 	
 	
