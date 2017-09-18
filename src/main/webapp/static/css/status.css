@@ -784,16 +784,16 @@ body,html{
 		float: left;
 	}
 	.nav .homeA{
-		padding-left: 26px;	
+		padding-left: 13px;	
 		background: url(../img/nav.png) no-repeat left top;
 		background-size: 100% 100%;
-		padding-right: 28px;
+		padding-right: 20px;
 	}
 	.nav .loginA{
 		padding-right: 23px;
 		background: url(../img/jianMiddle.png) no-repeat center;
 		background-size: 100% 100%;
-		padding-left: 30px;
+		padding-left: 20px;
 	}
 	
 	.messRight{
