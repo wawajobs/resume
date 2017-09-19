@@ -267,7 +267,9 @@ body,html{
 		padding: 0;
 		overflow: hidden;
 	    margin-left: -10px;
-		
+	}
+	.nav .loginA span{
+		margin-left: -1px;
 	}
 	.nav .loginA span,.nav .homeA span{
 		float: left;
