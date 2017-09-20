@@ -21,6 +21,62 @@ body,html{
 }
 /*兼容pc端样式:*/
 @media screen and (min-width: 769px){      
+	/*最后一屏*/
+	.lastBox{
+		overflow: hidden;
+	}
+	.lastBox .left{
+		float: left;
+		margin-left: 50px;
+		margin-top: 55px;
+	}
+	.lastBox .left img{
+		width: 155px;
+		height: 64px;
+	}
+	.lastBox .left p{
+		font-size: 14px;
+		color: #000;
+		font-weight: 600;
+		margin-top: 17px;
+	}
+	.lastBox .left p em{
+		color: #8e868b;
+		margin-left: 14px;
+	}
+	.lastBox .right{
+		margin-top: 42px;
+		margin-right: 40px;
+		float: right;
+		overflow: hidden;
+	}
+	.lastBox .right .leftR{
+		float: right;
+		margin-right: 40px;
+	}
+	.lastBox .right .leftR img{
+		width: 110px;
+		height: 110px;
+	}
+	.lastBox .right .leftR p{
+		text-align: center;
+		font-size: 13px;
+		font-weight: 600;
+	}
+	.lastBox .right .rightR{
+		width: 194px;
+		float: right;
+	}
+	.lastBox .right .rightR img{
+		width: 86px;
+		height: 86px;
+		margin-left: 52px
+	}
+	.lastBox .right .rightR p{
+		font-size: 13px;
+		font-weight: 600;
+		text-align: center;
+	}
 	/*logo*/
 .logoBox{
 	width: 100%;
@@ -482,9 +538,9 @@ form{
 	height: 40px;
 	line-height: 40px;
 }
-.left1 input{
-	width: 49%;
-}
+#againP{
+		margin-bottom: 42px;
+	}
 .left1 #name{
 	float: left;
 }
@@ -494,6 +550,16 @@ form{
 .left #subm input{
 	background: transparent;
 	text-indent:0;
+    font-size: 16px;
+}
+.left .signInP{
+	color: #aec5d4;
+	height: 20px;
+    line-height: 20px;
+}
+.signInP a{
+	color: #aec5d4;
+	margin-left: 10px;
 }
 .left #subm{
 	width: 112px;
@@ -502,9 +568,10 @@ form{
 	line-height:38px;
 	background: #11a1dc;
 	border: 1px solid #0b89c3;
+	margin-bottom: 4px;
 }
 ::-webkit-input-placeholder { /* WebKit browsers */ 
-	color: #fff; 
+	color: #aec5d4; 
 	font-size: 0.05rem;
 } 
 textarea{
@@ -528,7 +595,6 @@ textarea{
 .right p{
 	margin-left: 0;
 	line-height: 22px;
-	color: #dae9f1;
 }
 .right .noneImg{
 	padding-left: 36px;
@@ -568,7 +634,6 @@ textarea{
 	overflow: hidden;
 }
 .lastBoxCenter{
-	width: 66%;
 	height: 100%;
 	margin: 0 auto;
 	overflow: hidden;
@@ -696,11 +761,16 @@ textarea{
 .teaDownMask .part3{
 	float: right;
 }
-
+.lubiao .biaocenter{
+		font-size: 15px;
+	} 
 }
 
 /*兼容移动端样式*/
-@media screen and (max-width: 768px){      
+@media screen and (max-width: 768px){  
+	.lubiao .biaocenter{
+		font-size: 0.1rem;
+	}    
 	.slide1Img,.slide2Img,.slide3Img,.slide4Img{
 		display: block;
 	}
@@ -1133,7 +1203,7 @@ textarea{
 	.contactBox .left {
 	    width: 3.24rem;
 	    margin: 0 auto;
-	    margin-top: 0.73rem;
+	    margin-top: 0.5rem;
 	    margin-bottom: 0.25rem;
 	}
 	form {
@@ -1146,11 +1216,19 @@ textarea{
 	    margin-bottom: 0.06rem;
 	    height: 0.22rem;
 	    line-height: 0.22rem;
-	    border: 1px solid #00426c;
+	}
+	.left .signInP {
+	    text-align: center;
+		font-size: 0.12rem;
+		border: 0;
+	}
+	.signInP a{
+		margin-left: 0.1rem;
+		text-align: center;
 	}
 	.left1 #name {
 	    float: left;
-	    width: 1.6rem;
+	    width: 100%;
 	}
 	.left1 #email {
 	    float: right;
@@ -1187,7 +1265,7 @@ textarea{
 	    text-align: center;
 	    line-height: 0.22rem;
 	    background: #11a1dc;
-	    margin: 0 auto;
+	    margin: 0.1rem auto;
 	    border: 0;
 	    border-left: 1px solid #1182b9;
 	    border-bottom: 1px solid #1182b9;
@@ -1201,15 +1279,10 @@ textarea{
 	    font-size: 0.1rem;
 	}
 	.contactBox .right .p1{
-		float: left;
-		margin-left: 0.2rem;
 		overflow: hidden;
-		width: 1rem;
 	}
 	.contactBox .right .p2{
 		overflow: hidden;
-		float: right;
-		margin-right: 0.2rem;
 	}
 	.contactBox .right .p2 p{
 		line-height: 0.2rem;
@@ -1218,20 +1291,14 @@ textarea{
 	    padding-left: 0.23rem;
 	}
 	.right p {
-	    margin-left: 0;
 	    line-height: 0.16rem;
-	    color: #dae9f1;
 	    font-size: 0.08rem;
 	}
 	.lubiao img {
 	    width: 0.15rem;
 	    height: 0.15rem;
-        margin-left: 0.45rem;	
-	}
-	.lubiao .biaocenter{
-	    width: 100%;
-	    display: block;
-	    text-align: center;
+	    display: inline;
+        margin-left: 1rem;
 	}
 	.right .number {
 	    font-size: 0.1rem;
@@ -1239,7 +1306,8 @@ textarea{
 	.number1 img {
 	    width: 0.13rem;
 	    height: 0.13rem;
-        margin-left: 0.8rem;
+        margin-left: 1rem;
+        display: inline;
 	}
 	.number2 img {
 	    width: 0.15rem;
@@ -1259,11 +1327,59 @@ textarea{
 	    background: #fcfffc;
 	    overflow: hidden;
 	}
+	.lastBox .left{
+		float: left;
+	    width: 1.5rem;
+	    overflow: hidden;
+	    height: 1.5rem;
+	}
+	.lastBox .left img{
+	    width: 75%;
+	    height: 0.45rem;
+	    margin: 0.15rem;
+	    margin-bottom: 0.05rem;
+	}
+	.lastBox .left p{
+    	font-size: 0.12rem;
+    	width: 100%;
+    	height: auto;
+	    margin-left: 0.16rem;
+    	font-size: 0.08rem;
+	}
+	.lastBox .left p span,.lastBox .left p em{
+		float: left;
+	}
+	.lastBox .right{
+		float: right;
+	}
+	.lastBox .right .rightR{
+	    height: 1rem;
+	    float: right;
+	    margin-right: 0.1rem;
+	}
+	.lastBox .right .rightR img{
+        width: 0.5rem;
+    	height: 0.5rem;
+    	margin: 0 auto;
+    	margin-top: 0.15rem;
+	}
+	.lastBox .right .leftR{
+		width: 0.5rem;
+	    height: 1rem;
+	    float: right;
+	    margin-right: 0.1rem;
+	}
+	.lastBox .right .leftR img{
+        width: 0.5rem;
+	    height: 0.5rem;
+	    margin-top: 0.15rem;
+	}
 	.lastBoxCenter {
 	    width: 3rem;
 	    height: 100%;
 	    margin: 0 auto;
 	    overflow: hidden;
+        margin-top: 0.15rem;
 	}
 	.lastBoxCenter div {
 	    overflow: hidden;
