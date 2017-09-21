@@ -777,6 +777,9 @@ textarea{
 
 /*兼容移动端样式*/
 @media screen and (max-width: 768px){  
+	.swiper-slide{
+		height: 6.67rem;
+	}
 	.lubiao .biaocenter{
 		font-size: 0.1rem;
 	}    
@@ -916,6 +919,10 @@ textarea{
 	    width: 100%;
 	    height: 100%;
 	    background: #e4eff3;
+	}
+	.lun3Box .swiper-wrapper{
+	    display: -webkit-box;
+	    display: box;
 	}
 	.slide1 {
 	    overflow: hidden;
