@@ -30,9 +30,9 @@ $(function(){
 		
 		//========================================第二版改进====整屏滚动=========================================
 		/*第一屏*/
-		var AllHeight=$(document).height();
+		/*var AllHeight=$(document).height();
 		var bannerHeight=AllHeight-122;
-		$('.banner').height(bannerHeight);
+		$('.banner').height(bannerHeight);*/
 		
 		/*第二屏  lun2 who*/
 		var lun2DownWidth=$('.lun2Box').find('.down').width();

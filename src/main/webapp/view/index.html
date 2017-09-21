@@ -9,38 +9,23 @@
 		<meta name="x5-orientation" content="portrait">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-		<link rel="stylesheet" type="text/css" href="../static/css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../static/css/swiper.css"/>
 		<link rel="stylesheet" type="text/css" href="../static/css/index.css"/>
 
 		<!-- Demo styles -->
 		<style>
 			html,body {
 				position: relative;
-				height: 100%;
+				height: 746px;
 			}
 			
 			.swiper-container3 {
 				width: 100%;
-				height: 100%;
+				/*height: 100%;*/
 				/*给类名加完下标后不加overflow会出现滚动条*/
 				overflow: hidden;
 			}
 			
-			.swiper-slide {
-				/* Center slide text vertically */
-				/*display: -webkit-box;
-				display: -ms-flexbox;
-				display: -webkit-flex;
-				display: flex;
-				-webkit-box-pack: center;
-				-ms-flex-pack: center;
-				-webkit-justify-content: center;
-				justify-content: center;
-				-webkit-box-align: center;
-				-ms-flex-align: center;
-				-webkit-align-items: center;
-				align-items: center;*/
-			}
 		</style>
 		
 	</head>
@@ -418,12 +403,12 @@
 		<script src="../static/js/resume/feedback.js"></script>
 
 		<script>
-			var swiper = new Swiper('.swiper-container3', {
-//				pagination: '.swiper-pagination',
-				paginationClickable: true,
-				mousewheelControl : true,
-				direction: 'vertical'
-			});
+//			var swiper = new Swiper('.swiper-container3', {
+////				pagination: '.swiper-pagination',
+//				paginationClickable: true,
+//				mousewheelControl : true,
+//				direction: 'vertical'
+//			});
 			
 			function feedback(){
 				var name = $("#name").val();
