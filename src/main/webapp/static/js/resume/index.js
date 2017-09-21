@@ -6,6 +6,11 @@ var swiper = new Swiper('.swiper-container', {		//最外层的盒子
    	autoplayDisableOnInteraction :false
 });
 	  
+//设置.swiper-slide的高度
+var swiperHeight=$(window).height();
+$('.swiper-slide').height(swiperHeight);
+
+
 
 $(function(){
 	var windowWidth=$(window).width();
@@ -30,14 +35,14 @@ $(function(){
 		
 		//========================================第二版改进====整屏滚动=========================================
 		/*第一屏*/
-		/*var AllHeight=$(document).height();
-		var bannerHeight=AllHeight-122;
-		$('.banner').height(bannerHeight);*/
+//		var AllHeight=$(document).height();
+//		var bannerHeight=AllHeight-122;
+//		$('.banner').height(bannerHeight);
 		
 		/*第二屏  lun2 who*/
-		var lun2DownWidth=$('.lun2Box').find('.down').width();
-		var lun2DownHeight=Math.round(lun2DownWidth*0.45);
-		$('.lun2Box').find('.down').height(lun2DownHeight+'px');
+//		var lun2DownWidth=$('.lun2Box').find('.down').width();
+//		var lun2DownHeight=Math.round(lun2DownWidth*0.5);
+//		$('.lun2Box').find('.down').height(lun2DownHeight+'px');
 		
 		
 	}
@@ -62,7 +67,7 @@ window.onload=function(){
 			move(aImg[nowIndex],'opacity',100);
 		}
 	}
-//	var timer=setInterval(jianbian,2000);
+	var timer=setInterval(jianbian,2000);
 }
 
 /*lun3 teaching*/
