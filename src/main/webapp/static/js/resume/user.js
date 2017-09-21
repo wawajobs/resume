@@ -46,7 +46,7 @@
 				    }
 				});
 			},
-			register : function(email,pwd){
+			register : function(email,pwd,errorId){
 				$.ajax({
 					url: user.baseUrl+user.URL.register,
 					type:"post",
@@ -62,7 +62,11 @@
 							Post(user.baseUrl + "/login", parames );
 							//window.location.href = user.baseUrl + "/interview/page";
 						}else{
-							$("#errorSpan").html(data.message);
+							if(errorId){
+								$("#" + errorId).html(data.message);
+							}else{
+								$("#errorSpan").html(data.message);
+							}
 						}
 					},
 					error: function(XMLHttpRequest, textStatus, errorThrown) {

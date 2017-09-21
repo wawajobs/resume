@@ -341,8 +341,8 @@
 								</p>
 								<p><input type="text" name="tex" id="password" value="" placeholder="Enter your password"/></p>
 								<p id="againP"><input type="text" name="passwordAgain" id="tex" value="" placeholder="Enter your password again"/></p>
-								<p id="wrongDetail">两次输入的密码不一致</p>
-								<p id="subm"><input type="submit" value="OK"/></p>
+								<p id="wrongDetail"></p>
+								<p id="subm"><input type="button" onclick="fun_submit();" value="OK"/></p>
 								<p class="signInP">Have an account?<a href="#javascript;">Sign in</a></p>
 							</form>
 						</div>
@@ -402,6 +402,7 @@
 		<script src="../static/js/resume/base.js"></script>
 		<script src="../static/js/resume/index.js"></script>
 		<script src="../static/js/resume/feedback.js"></script>
+		<script src="../static/js/resume/user.js"></script>
 
 		<script>
 //			var swiper = new Swiper('.swiper-container3', {
@@ -410,6 +411,31 @@
 //				mousewheelControl : true,
 //				direction: 'vertical'
 //			});
+
+		function fun_submit(){
+				user.baseUrl = Base.url;
+				var email = $("#email").val() ;
+				var pwd = $("#password").val() ;
+				var repwd = $("#passwordAgain").val() ;
+				if(email == ""){
+					$("#wrongDetail").html("Please fill in the email");
+					return ;
+				}
+				if(pwd == ""){
+					$("#wrongDetail").html("Please fill in the password");
+					return ;
+				}else if(repwd == ""){
+					$("#wrongDetail").html("Please confirm the password");
+					return ;
+				}
+				
+				if(pwd != repwd){
+					$("#wrongDetail").html("Two passwords are different");
+					return;
+				}
+				
+				user.register(email, pwd,"wrongDetail");
+			}
 			
 			function feedback(){
 				var name = $("#name").val();
