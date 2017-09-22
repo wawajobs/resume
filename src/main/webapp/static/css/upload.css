@@ -32,7 +32,7 @@ body,html{
 		overflow: hidden;
 	}
 	.nav a{
-		color: #63d5c8;
+		color: #69bae5;
 		font-size: 18px;
 		padding-top: 8px;
 		padding-bottom: 8px;
@@ -211,7 +211,7 @@ body,html{
 		overflow: hidden;
 	}
 	.nav a{
-		color: #63d5c8;
+		color: #69bae5;
 		font-size: 18px;
 		padding-top: 8px;
 		padding-bottom: 8px;
@@ -234,12 +234,12 @@ body,html{
 	
 	/*表单*/
 	.formBox{
-		width: 44.5%;
+		width: 3.5rem;
 		box-shadow: 0 0 15px #5ba1c6;
 		border-radius: 40px;
 		background: #fff;
 		margin: 0 auto;
-		margin-top: 10%;
+		margin-top: 1rem;
 		overflow: hidden;
 	}
 	.tit{

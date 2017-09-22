@@ -83,6 +83,7 @@ body,html{
 		margin: 0 auto;
 		margin-bottom: 28px;
 		padding-left: 10px;
+		font-size: 16px;
 	}
 	.loginBox #passwordAgain{
 		margin-bottom: 46px;
