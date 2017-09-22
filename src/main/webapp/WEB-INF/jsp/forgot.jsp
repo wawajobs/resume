@@ -3,6 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106861645-1"></script>
+	<script>
+	  	window.dataLayer = window.dataLayer || [];
+	  	function gtag(){dataLayer.push(arguments)};
+	  	gtag('js', new Date());
+	  	gtag('config', 'UA-106861645-1');
+	</script>
 	<%@include file="/WEB-INF/jsp/common/head.jsp"%>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>

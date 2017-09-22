@@ -11,6 +11,13 @@
 		<script src="../../../static/js/base.js"></script>
 		<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/jquery/jquery-3.0.0.js"></script>
 		<script src="${pageContext.request.contextPath }/static/js/resume/upload.js"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106861645-1"></script>
+		<script>
+		  	window.dataLayer = window.dataLayer || [];
+		  	function gtag(){dataLayer.push(arguments)};
+		  	gtag('js', new Date());
+		  	gtag('config', 'UA-106861645-1');
+		</script>
 		<script type="text/javascript">
 		$(function(){
 			var error = "${param.error}";

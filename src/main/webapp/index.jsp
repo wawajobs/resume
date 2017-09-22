@@ -5,6 +5,13 @@
 
 	<head>
 		<meta charset="utf-8">
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106861645-1"></script>
+		<script>
+		  	window.dataLayer = window.dataLayer || [];
+		  	function gtag(){dataLayer.push(arguments)};
+		  	gtag('js', new Date());
+		  	gtag('config', 'UA-106861645-1');
+		</script>
 		<title>WawajobsChina</title>
 		<meta name="keywords" content="resume,jobs,,job search,find jobs,recruit,WawajobsChina">
 		<meta http-equiv="Window-target"  content="_top">

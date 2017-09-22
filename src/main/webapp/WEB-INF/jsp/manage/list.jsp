@@ -16,6 +16,13 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/resume/map.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/jquery-reveal/jquery.reveal.js"></script>
 	<script src="${pageContext.request.contextPath }/static/js/layui/layui.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106861645-1"></script>
+	<script>
+	  	window.dataLayer = window.dataLayer || [];
+	  	function gtag(){dataLayer.push(arguments)};
+	  	gtag('js', new Date());
+	  	gtag('config', 'UA-106861645-1');
+	</script>
 	<title>sign in</title>
 	<script>
 var list=new QueryList("line_list","");

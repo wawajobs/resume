@@ -3,6 +3,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106861645-1"></script>
+		<script>
+		  	window.dataLayer = window.dataLayer || [];
+		  	function gtag(){dataLayer.push(arguments)};
+		  	gtag('js', new Date());
+		  	gtag('config', 'UA-106861645-1');
+		</script>
 <title>404</title>
 </head>
 <body>

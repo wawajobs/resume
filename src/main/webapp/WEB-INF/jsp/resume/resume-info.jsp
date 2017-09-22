@@ -14,6 +14,13 @@
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/static/js/layui/layui.css"/>
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/static/css/personalInformation.css"/>
 	<script src="../../../static/js/base.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106861645-1"></script>
+	<script>
+	  	window.dataLayer = window.dataLayer || [];
+	  	function gtag(){dataLayer.push(arguments)};
+	  	gtag('js', new Date());
+	  	gtag('config', 'UA-106861645-1');
+	</script>
 	</head>
 	<body>
 		<div class="box">
