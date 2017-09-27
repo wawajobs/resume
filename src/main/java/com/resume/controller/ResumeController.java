@@ -1,11 +1,13 @@
 package com.resume.controller;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,15 +16,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.resume.dto.ResumeFile;
+import com.resume.common.MailSender;
 import com.resume.dto.ResumeInfo;
-import com.resume.enums.FileType;
 import com.resume.response.BaseResponse;
 import com.resume.response.ResumeResponse;
 import com.resume.service.ResumeFileService;
 import com.resume.service.ResumeService;
 import com.resume.spring.security.SecurityContextUtil;
 import com.resume.spring.security.User;
+import com.resume.util.RequestUtil;
 
 @Controller
 @RequestMapping("/info")
@@ -33,6 +35,12 @@ public class ResumeController extends AbstractController{
 	
 	@Autowired
 	private ResumeFileService resumeFileService;
+	
+	@Autowired
+	private MailSender mailSender;
+	
+	@Value("${feedbackEmail}")
+	private String feedbackEmail; 
 	
 	@RequestMapping("/page/add")
 	public String showResumeInfo(Model model,Long resumeId){
@@ -81,7 +89,7 @@ public class ResumeController extends AbstractController{
 	}
 	
 	@RequestMapping(value="/save",method=RequestMethod.POST)
-	public String saveResumeInfo(Model model,ResumeInfo resumeInfo,String clickType){
+	public String saveResumeInfo(Model model,HttpServletRequest request,ResumeInfo resumeInfo,String clickType){
 		log.info("@ resume/save resumeInfo:{}",new Object[]{resumeInfo});
 		ResumeResponse resp = new ResumeResponse();
 		if(StringUtils.isBlank(resumeInfo.getGender())){
@@ -95,6 +103,9 @@ public class ResumeController extends AbstractController{
 			resumeService.updateResumeInfo(resumeInfo);
 		}else{
 			resumeInfo = resumeService.saveResumeInfo(resumeInfo);
+			//邮件通知 apply@wawajobschina.com
+			mailSender.sendMail(feedbackEmail, "New applicant with CV uploaded", resumeInfo.getName() + "\n" 
+					+ RequestUtil.getCurrentUrl(request) + "/interview/page");
 		}
 		resp.setResumeInfo(resumeInfo);
 		model.addAttribute("resumeId", resumeInfo.getId());
