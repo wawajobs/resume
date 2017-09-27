@@ -14,7 +14,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/static/css/forgot.css"/>
-	<script src="../../static/js/resume/base.js"></script>
+	<script src="${pageContext.request.contextPath }/static/js/resume/base.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/jquery/jquery-3.0.0.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/resume/user.js"></script>
 	<title>sign in</title>
@@ -96,12 +96,12 @@
 			<div class="nav">
 				<a href="${pageContext.request.contextPath}/view/index.html" class="homeA">
 					<span>Home</span>
-					<img class="rightImg"  src="../../static/img/jianMiddleRight.png"/>
+					<img class="rightImg"  src="${pageContext.request.contextPath }/static/img/jianMiddleRight.png"/>
 				</a>
 				<a href="login.jsp" class="loginA">
-					<img class="leftImg" src="../../static/img/jianMiddleLeft.png"/>
+					<img class="leftImg" src="${pageContext.request.contextPath }/static/img/jianMiddleLeft.png"/>
 					<span>Forgot password</span>
-					<img class="rightImg"  src="../../static/img/jianMiddleRight.png"/>
+					<img class="rightImg"  src="${pageContext.request.contextPath }/static/img/jianMiddleRight.png"/>
 				</a>
 			</div>
 			

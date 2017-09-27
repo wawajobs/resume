@@ -18,7 +18,7 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/jquery/jquery-3.0.0.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/table/tableViewer.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath }/static/js/resume/user.js"></script>
-	<script src="../../static/js/base.js"></script>
+	<script src="${pageContext.request.contextPath }/static/js/base.js"></script>
 	<title>sign in</title>
 	<script>
 	

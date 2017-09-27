@@ -13,7 +13,7 @@
 
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/static/js/layui/layui.css"/>
 	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/static/css/personalInformation.css"/>
-	<script src="../../../static/js/base.js"></script>
+	<script src="${pageContext.request.contextPath }/static/js/base.js"></script>
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106861645-1"></script>
 	<script>
 	  	window.dataLayer = window.dataLayer || [];
@@ -28,12 +28,12 @@
 			<div class="nav">
 				<a href="${pageContext.request.contextPath}/view/index.html" class="homeA">
 					<span>Home</span>
-					<img class="rightImg"  src="../../../static/img/jianMiddleRight.png"/>
+					<img class="rightImg"  src="${pageContext.request.contextPath }/static/img/jianMiddleRight.png"/>
 				</a>
 				<a href="#" class="loginA">
-					<img class="leftImg" src="../../../static/img/jianMiddleLeft.png"/>
+					<img class="leftImg" src="${pageContext.request.contextPath }/static/img/jianMiddleLeft.png"/>
 					<span>Personal information</span>
-					<img class="rightImg"  src="../../../static/img/jianMiddleRight.png"/>
+					<img class="rightImg"  src="${pageContext.request.contextPath }/static/img/jianMiddleRight.png"/>
 				</a>
 			</div>
 			<p class="tit">Personal information</p>
