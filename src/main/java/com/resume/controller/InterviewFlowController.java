@@ -32,11 +32,20 @@ public class InterviewFlowController extends AbstractController{
 	@Autowired
 	private ResumeService resumeService;
 
+	/**
+	 * 登录后业务首页
+	 * 管理员直接跳管理页面
+	 * 还未添加个人信息的客户跳转到个人信息维护页面
+	 * 其他情况个人状态流程页面
+	 * @author LiShuai
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping("/page")
 	public String showInterviewPage(Model model){
 		log.info("@ interview/page ");
 		User user = (User)SecurityContextUtil.getUserDetails();
-		
+		//检查用户角色
 		if(BaseRoleType.EMPLOYEE.getCode().equals(user.getRole()) ||
 				BaseRoleType.ADMIN.getCode().equals(user.getRole())){
 			if(BaseRoleType.ADMIN.getCode().equals(user.getRole())){
@@ -44,7 +53,7 @@ public class InterviewFlowController extends AbstractController{
 			}
 			return "/manage/list";
 		}
-		
+		//查询个人信息是否已经填写
 		ResumeInfo resume = resumeService.getResumeByUserId(user.getId());
 		if(null == resume){
 			return "redirect:/info/page/add";
@@ -62,19 +71,33 @@ public class InterviewFlowController extends AbstractController{
 	}
 	
 	
+	/**
+	 * 更新简历筛选步骤
+	 * @author LiShuai
+	 * @param step 进行到第几步
+	 * @param resumeId 简历id
+	 * @param arrivedDate 到达中国时间
+	 * @param accepted 是否接受offer
+	 * @param visaDate 签证日期
+	 * @param flightDate 航班日期
+	 * @param place 到达中国地点
+	 * @return
+	 */
 	@ResponseBody
 	@RequestMapping(value="/{resumeId}/{step}/update",method=RequestMethod.POST)
 	public ResponseModel updateInterview(@PathVariable("step")Integer step,@PathVariable("resumeId")Long resumeId,Date arrivedDate,String accepted,Date visaDate,Date flightDate,String place){
 		log.info("@ interview/page id:{}",new Object[]{resumeId});
 		BaseResponse resp = new BaseResponse();
+		//检查参数
 		if(null == step || null == resumeId){
 			return resp.fail("Step and id cannot be null");
 		}
+		//检查信息是否存在
 		InterviewFlow flow = interviewFlowService.findById(resumeId);
 		if(null == flow){
 			return resp.fail("The resume is not exists");
 		}
-		
+		//检查步骤是否合法
 		if(step < 1){
 			return resp.fail("This is the first step");
 		}
@@ -100,6 +123,12 @@ public class InterviewFlowController extends AbstractController{
 		return resp.success(BaseResponse.SUCCESS_MESSAGE);
 	}
 	
+	/**
+	 * 查询当前用户的状态信息
+	 * @author LiShuai
+	 * @param resumeId
+	 * @return
+	 */
 	@ResponseBody
 	@RequestMapping(value="/{resumeId}/status",method=RequestMethod.GET)
 	public ResponseModel interviewStatus(@PathVariable("resumeId")Long resumeId){

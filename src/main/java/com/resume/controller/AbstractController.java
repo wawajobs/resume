@@ -9,6 +9,12 @@ import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 
+/**
+ * controller父类
+ * 将所有controller的共有属性放到此类中
+ * @author LiShuai
+ *
+ */
 public abstract class AbstractController {
 
 	protected Logger log = LoggerFactory.getLogger(this.getClass());

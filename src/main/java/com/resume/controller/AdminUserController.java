@@ -25,6 +25,11 @@ import com.resume.service.UserService;
 import com.resume.spring.security.SecurityContextUtil;
 import com.resume.spring.security.User;
 
+/**
+ * 登录后
+ * @author LiShuai
+ *
+ */
 @Controller
 @RequestMapping("user")
 public class AdminUserController extends AbstractController{
