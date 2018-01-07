@@ -23,7 +23,7 @@
 	  	gtag('js', new Date());
 	  	gtag('config', 'UA-106861645-1');
 	</script>
-	<title>sign in</title>
+	<title>resume list</title>
 	<script>
 var list=new QueryList("line_list","");
 	
