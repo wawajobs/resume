@@ -75,7 +75,7 @@ var QueryList = function (listID, tableType){
 		this.pager.itemCount = totalNum;
 		this.pager.onclick = function(index) {
 			var inx = (index - 1) * self.pageSize;
-			self.getData(inx, self.pageSize);
+			self.getData(index, self.pageSize);
 		};
 		this.pager.render();
 	};

@@ -22,6 +22,7 @@ var interview = {
 		save : "",
 		update : "",
 		list : "/interview/flow/list",
+		count : "/interview/flow/count"
 		
 	},
 	save : function(){
@@ -238,6 +239,21 @@ var interview = {
 				}else{
 					alert(data.message);
 				}
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown) {
+				 alert(XMLHttpRequest.status+"-"+XMLHttpRequest.readyState + "-" + textStatus);
+		    }
+		});
+	},
+	
+	createPager : function(step,list){
+		$.ajax({
+			url:interview.baseUrl+interview.URL.count,
+			type:"post",
+			dataType:"json",
+			data:{step:step},
+			success : function(data){
+				list.createPager(1,data.count);
 			},
 			error: function(XMLHttpRequest, textStatus, errorThrown) {
 				 alert(XMLHttpRequest.status+"-"+XMLHttpRequest.readyState + "-" + textStatus);

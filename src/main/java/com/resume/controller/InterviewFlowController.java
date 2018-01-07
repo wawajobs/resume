@@ -169,6 +169,19 @@ public class InterviewFlowController extends AbstractController{
 		return resp.success(BaseResponse.SUCCESS_MESSAGE);
 	}
 	
+	@ResponseBody
+	@RequestMapping(value="/flow/count",method=RequestMethod.POST)
+	public ResponseModel countFlow(Long step){
+		log.info("@ interview/flow/count step:{}",new Object[]{step});
+		BaseResponse resp = new BaseResponse();
+		if(null == step){
+			step = 1L;
+		}
+		int count = interviewFlowService.countFlow(step);
+		resp.setCount(count);
+		return resp.success(BaseResponse.SUCCESS_MESSAGE);
+	}
+	
 	
 	
 	

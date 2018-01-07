@@ -16,6 +16,8 @@ public interface InterviewFlowService {
 	
 	public List<InterviewFlow> list(Long step,String col,String order,Integer page,Integer size);
 	
+	public int countFlow(Long step);
+	
 	public InterviewFlow findByResumeIdWithResume(long resumeId);
 
 }

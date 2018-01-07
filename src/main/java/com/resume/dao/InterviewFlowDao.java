@@ -37,6 +37,7 @@ public interface InterviewFlowDao {
 	
 	List<InterviewFlowPo> listPos(@Param("step")long step,@Param("col")String col,@Param("order")String order,@Param("beginIndex")Integer beginIndex,@Param("size")Integer size);
 	
+	int countFlow(Long step);
 	
 
 }

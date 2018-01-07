@@ -79,12 +79,18 @@ public class InterviewFlowServiceImpl implements InterviewFlowService{
 		flow.setResumeInfo(resumeInfo);
 		return flow;
 	}
+	
+	@Override
+	public int countFlow(Long step) {
+		// TODO Auto-generated method stub
+		return interviewFlowDao.countFlow(step);
+	}
 
 	@Override
 	public List<InterviewFlow> list(Long step, String col, String order,Integer page,Integer size) {
 		Integer beginIndex = null;
 		if(page != null){
-			beginIndex = (page -1 ) * size;
+			beginIndex = page;
 		}
 		List<InterviewFlowPo> listPos = interviewFlowDao.listPos(step, col, order, beginIndex, size);
 		List<Long> resumeIds = new ArrayList<Long>();

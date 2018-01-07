@@ -74,6 +74,12 @@
 		
 		
 	</select>
+	<select id="countFlow" resultType="Int">
+		select count(1) from t_interview_flow f
+		inner join t_resume_info r on f.resume_id = r.id 
+		where step=#{step}
+		
+	</select>
 	
 
 	

@@ -19,6 +19,8 @@ public class BaseResponse implements ResponseModel {
 	private String message = SUCCESS_MESSAGE;
 	
 	private List<?> data;
+	
+	private int count;
 
 	public int getStatus() {
 		return status;
@@ -55,6 +57,16 @@ public class BaseResponse implements ResponseModel {
         setMessage(message);
         return this;
 	}
+
+	public int getCount() {
+		return count;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
+	}
+	
+	
 	
 
 }

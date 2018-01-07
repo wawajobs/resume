@@ -36,18 +36,24 @@ var list=new QueryList("line_list","");
 				"Resume","Video","Message","Backward","Forward","");
 		
 		list.fill=false;
-	    list.getData = function (col,sort,page,size){
-	    	interview.list(col,sort,page,size,fillTable);
+		list.pageSize=5;
+	    list.getData = function (index,size,col,sort){
+	    	interview.list(col,sort,index,size,fillTable);
 		
 		}; 
 		list.createTable();
-		list.getData(null,null,null,null);
+		list.getData(0,list.pageSize,null,null);
+		
+	    interview.createPager(1,list);
+	
+		
 		
 		$(".left").on('click','li',function(){
 			$(".left li").removeClass("sel");
 			$(this).addClass("sel");
 			interview.currentStep = $(this).attr("value");
-			interview.list(null,null,null,null,fillTable);
+			interview.list(null,null,0,list.pageSize,fillTable);
+			interview.createPager(interview.currentStep,list);
 		});
 		
 		$("#line_list").on('click','.name',function(){
