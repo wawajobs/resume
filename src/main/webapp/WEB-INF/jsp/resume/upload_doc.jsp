@@ -45,10 +45,20 @@
 			});
 			
 			$("#upload1").on("click",function(){
+				var filePath=$("#alone1").val();
+				if("" == filePath){
+					alert("please choose a file");
+					return ;
+				}
 				$("#form1").submit();
 			});
 			
 			$("#upload2").on("click",function(){
+				var filePath=$("#alone1").val();
+				if("" == filePath){
+					alert("please choose a file");
+					return ;
+				}
 				$("#form2").submit();
 			});
 			
