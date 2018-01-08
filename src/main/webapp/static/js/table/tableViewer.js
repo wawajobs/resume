@@ -368,7 +368,7 @@ var PagerView = function(id){
 				}
 			}
 		}
-		str += ' 一共' + self._pageCount + '页, ' + self.itemCount + '条记录 ';
+		str += ' Total page ' + self._pageCount + ', Total ' + self.itemCount + ' ';
 		str += '</div><!-- /.pagerView -->\n';
 		self.container.innerHTML = str;
 		var a_list = self.container.getElementsByTagName('a');
