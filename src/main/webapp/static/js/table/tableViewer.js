@@ -368,7 +368,7 @@ var PagerView = function(id){
 				}
 			}
 		}
-		str += ' Total page ' + self._pageCount + ', Total ' + self.itemCount + ' ';
+		str += ' Total pages ' + self._pageCount + ', Total ' + self.itemCount + ' ';
 		str += '</div><!-- /.pagerView -->\n';
 		self.container.innerHTML = str;
 		var a_list = self.container.getElementsByTagName('a');
