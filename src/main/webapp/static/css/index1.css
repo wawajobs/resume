@@ -1,0 +1,695 @@
+/*-------------------------------------base-重置部分--------------------------------------------*/
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{font-size:62.5%; font-family:"微软雅黑";}
+em,i{font-style: normal;}
+
+/*-------------------------------------页面部分--------------------------------------------*/
+body,html{
+	width: 100%;
+	
+}
+/*.box{
+	overflow: hidden;
+	overflow-x: hidden;
+}*/
+#Login,#Signup{
+	cursor: pointer;
+}
+
+@media screen and (min-width: 769px){   
+
+	/*logo*/
+.logoBox{
+	width: 100%;
+	height: 0.718rem;
+	/*background: #fff;*/
+	background: #515C6D;
+	overflow: hidden;
+}
+
+.headMenu1{
+	display: none;
+}
+
+.headMenu{
+	margin: 0 auto;
+	font-size: 0.12rem;
+	color: #FFF;
+	float: left;
+	width: 40%;
+	height: 100%;
+}
+
+.headMenu ul{
+	
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.headMenu ul li {
+				display: inline-block;
+				padding: 0.1rem 0.2rem 0px 0.2rem;
+				cursor: pointer;
+				-webkit-transition: 0.3s ease-in-out;
+				-moz-transition: 0.3s ease-in-out;
+				-ms-transition: 0.3s ease-in-out;
+				-o-transition: 0.3s ease-in-out;
+				transition: 0.3s ease-in-out;
+				margin-top: 0.2rem;
+   				height: 0.718rem;
+			}
+				
+.headMenu ul li:hover, .selected {
+	background: #444D57;
+}
+
+	.headMenu ul li a, .headMenu ul a:visited {
+		font-size: 0.08rem;
+		line-height: 0.35rem;
+		color: #fff;
+		text-decoration: none;
+	}
+
+
+
+.menu-checked{
+	background: #444D57;
+}
+
+.Pbox{
+	color: #fff;
+}
+.logoBox .up{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.logoBox .up .logoContant{
+	width: 30%;
+	height: 100%;
+	float: left;
+}
+
+.logoBox .up .logo{
+	width: 1.19rem;
+    height: 0.518rem;
+    float: left;
+    margin: 0.1rem 0 0 0.2rem;
+}
+.logoBox .up .signAndLog{
+	float: right;
+	font-size: 16px;
+	margin: 36px 39px 0 0;
+	font-weight: 100;
+}
+.logoBox .down{
+	width: 66%;
+	height: 49px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+form{
+	width: 100%;
+	overflow: hidden;
+}
+.logoBox .down li{
+	width: 12.5%;
+	height: 100%;
+	box-sizing: border-box;
+	float: left;
+	font-size: 11px;
+	text-align: center;
+	line-height: 44px;
+	border: 2px solid #ededed;
+	border-left: 0;
+}
+.logoBox .down .first{
+	border-left: 2px solid #ededed;
+}
+/*banner*/
+.banner{
+	width: 100%;
+	height: 25%;
+	overflow: hidden;
+	position: relative;
+	/*margin-top: 1px;*/
+}
+.banner img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+    left: 0;
+    top: 0;
+}
+.banner #con{
+	font-family: arial;
+    width: 40%;
+    color: #fff;
+    font-size: 15px;
+    overflow: hidden;
+    /* background: #4286c5; */
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    padding: 20px 10px;
+    margin: 0 auto;
+}
+.banner .con3{
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    font-family: 'Roboto',sans-serif;
+}
+.banner #con p a{
+	color: #fff;
+	font-size: 10px;
+}
+#con .con1{
+	margin-top: 14px;
+}
+#con .con2{
+	font-size: 32px;
+    text-align: center;
+}
+
+.screen-containt1{
+	margin-right: auto;
+    margin-left: auto;
+    width:1100px;
+}
+
+.first-content{
+	float: left;
+	font-size: 0.12rem;
+	margin-left: 12%;
+	margin-top: 0.1rem;
+	padding: 0.15rem;
+	background: #f0f1f7;
+	width: 303px;
+    padding: 70px 165px 70px 70px;
+	min-height: 655px;
+}
+.first-content .con2{
+	font-weight: 300;
+    font-size: 28px;
+    line-height: 38px;
+    color: #171E34;
+    max-width: 100%;
+    margin-bottom: 35px;
+    font-family: 'Roboto',sans-serif;
+}
+.first-content .con3{
+	font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 26px;
+    color: #989898;
+    font-weight: 400;
+}
+.first-pic{
+	margin:0.2rem 0 0 -0.3rem;
+	width: 35%;
+	float: left;
+	box-shadow: 0 15px 40px 23px #dddddd;
+}
+.second-div{
+	margin-top: 0.2rem;
+}
+.second-pic{
+	margin:0.2rem 0 0 0;
+	width: 42%;
+	float: left;
+	box-shadow: -0.2rem -0.2rem 0 #f0f1f7;
+}
+.second-content{
+	float: left;
+	font-size: 0.12rem;
+	margin-left: 5%;
+	padding: 20px;
+	width:45%;
+	
+	
+}
+.second-content .con2{
+    padding: 0;
+    font-size: 28px;
+    line-height: 31px;
+    text-transform: none;
+    max-width: 400px;
+    font-family: 'Roboto',sans-serif;
+    color: #171E34;
+    margin-bottom: 40px;
+
+}
+.second-content .con3{
+   word-wrap: break-word;
+    font-family: 'Roboto',sans-serif;
+    font-size: 14px;
+    color: #777777;
+    font-weight: 400;
+    margin-bottom: 30px;
+    max-width: 450px;
+}
+
+.three-div{
+	width: 100%;
+	background: #f3f7fb;
+	float: left;
+}
+
+.three-content{
+	float: left;
+	font-size: 0.12rem;
+	margin-left: 5%;
+	padding: 0.15rem;
+	width:35%;
+}
+.three-content .con2{
+	font-size: 0.14rem;
+	margin: 0.2rem 0.2rem;
+    font-size: 28px;
+    line-height: 31px;
+    text-transform: none;
+    max-width: 400px;
+    font-family: 'Roboto',sans-serif;
+    color: #171E34;
+}
+.three-content .con3{
+	font-size: 0.12rem;
+	margin: 0.2rem 0.2rem;
+	word-wrap: break-word;
+    font-family: 'Roboto',sans-serif;
+    font-size: 14px;
+    color: #777777;
+    font-weight: 400;
+    margin-bottom: 30px
+}
+.three-pic{
+	margin:0.2rem 0 0 10%;
+	width: 35%;
+	display: inline;
+	box-shadow: 40px 40px 0 5px #f0f1f7;
+	/*float: left;*/
+	/*box-shadow: -0.2rem -0.2rem 0 #f0f1f7;*/
+}
+
+.full-bg  {
+    padding-bottom: 0;
+    height: inherit;
+    background-size: cover;
+    font-size: 42px;
+    color: #ffffff;
+    background-attachment: fixed;
+    background-color: #181e33;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    background-size: contain;
+    height: 525px;
+    width:100%;
+    float: left;
+}
+
+.full-bg h2 {
+	
+    padding-top: 120px;
+    font-weight: 400;
+    color: #fefefe;
+    font-size: 28px;
+}
+
+.full-bg .lead{
+    max-width: 380px;
+    margin-left: 0;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #fefefe;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.full-bg a{
+    background-color: white;
+    color: black;
+    border-radius: 25px 25px;
+    padding: 15px 32px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+}
+
+.reg-btn{
+    color: #ffffff;
+    background-color: #71bf44;
+    border-radius: 5px;
+    padding: 4px 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin: 0 10px;
+    top: -2px;
+    position: relative;
+    font-weight: 400;
+}
+
+.login-btn{
+	color: #ffffff;
+}
+
+.triangle-up-selected  {
+			    width: 0;
+			    height: 0;
+			    border-left: 3px solid transparent;
+			    border-right: 3px solid transparent;
+			    border-bottom: 6px solid white;
+			    margin: 0 auto;
+			}
+			
+.triangle-up{
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 6px solid #515C5D;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 768px){   
+
+	/*logo*/
+.logoBox{
+	width: 100%;
+	height: 0.718rem;
+	/*background: #fff;*/
+	background: #515C6D;
+	overflow: hidden;
+}
+
+
+
+.headMenu{
+	   display: none;
+}
+
+/*.headMenu ul{
+	
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}*/
+
+.headMenu1 ul li {
+	width: 50%;
+    font-size: 0.2rem;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+    background:#515C5D;
+			}
+				
+.headMenu1 .selected{
+	background: #444D57;
+}
+
+	.headMenu1 ul li a, .headMenu ul a:visited {
+		font-size: 0.08rem;
+		line-height: 0.35rem;
+		color: #fff;
+		text-decoration: none;
+	}
+
+
+
+.menu-checked{
+	background: #444D57;
+}
+
+.Pbox{
+	color: #fff;
+}
+.logoBox .up{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.logoBox .up .logoContant{
+	width: 30%;
+	height: 100%;
+	float: left;
+}
+
+.logoBox .up .logo{
+	width: 1.19rem;
+    height: 0.518rem;
+    float: left;
+    margin: 0.1rem 0 0 0.2rem;
+}
+.logoBox .up .signAndLog{
+	float: right;
+	font-size: 16px;
+	margin: 36px 39px 0 0;
+	font-weight: 100;
+}
+.logoBox .down{
+	width: 66%;
+	height: 49px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+form{
+	width: 100%;
+	overflow: hidden;
+}
+.logoBox .down li{
+	width: 12.5%;
+	height: 100%;
+	box-sizing: border-box;
+	float: left;
+	font-size: 11px;
+	text-align: center;
+	line-height: 44px;
+	border: 2px solid #ededed;
+	border-left: 0;
+}
+.logoBox .down .first{
+	border-left: 2px solid #ededed;
+}
+/*banner*/
+.banner{
+	width: 100%;
+	height: 25%;
+	overflow: hidden;
+	position: relative;
+	/*margin-top: 1px;*/
+}
+.banner img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+    left: 0;
+    top: 0;
+}
+.banner #con{
+	font-family: arial;
+    color: #fff;
+    font-size: 15px;
+    overflow: hidden;
+    /* background: #4286c5; */
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    padding: 20px 10px;
+    margin: 0 auto;
+}
+.banner .con3{
+    font-size: 0.16rem;
+    line-height: 0.18rem;
+    font-weight: 500;
+    font-family: 'Roboto',sans-serif;
+}
+.banner #con p a{
+	color: #fff;
+	font-size: 10px;
+}
+#con .con1{
+	margin-top: 14px;
+}
+#con .con2{
+	font-size: 0.32rem;
+    text-align: center;
+}
+
+.screen-containt1{
+	margin-right: auto;
+    margin-left: auto;
+    float: left;
+}
+
+.first-content{
+	font-size: 0.12rem;
+    margin-top: 0.1rem;
+    padding: 0.15rem;
+    background: #f0f1f7;
+    /* width: 90%; */
+    /* padding: 70px 165px 70px 70px; */
+    min-height: 655px;
+}
+.first-content .con2{
+	font-weight: 300;
+    font-size: 28px;
+    line-height: 38px;
+    color: #171E34;
+    max-width: 100%;
+    margin-bottom: 35px;
+    font-family: 'Roboto',sans-serif;
+}
+.first-content .con3{
+	font-size: 14px;
+    margin-bottom: 30px;
+    line-height: 26px;
+    color: #989898;
+    font-weight: 400;
+}
+.first-pic{
+	width: 100%;
+	float: left;
+}
+.second-div{
+	margin-top: 0.2rem;
+}
+.second-pic{
+    margin: 0.2rem 0 0 0;
+    width: 100%;
+    /* float: left; */
+    /* box-shadow: -0.2rem -0.2rem 0 #f0f1f7; */
+}
+.second-content{
+    /* float: left; */
+    font-size: 0.12rem;
+    /* margin-left: 5%; */
+    padding: 20px;
+	
+	
+}
+.second-content .con2{
+    padding: 0;
+    font-size: 28px;
+    line-height: 31px;
+    text-transform: none;
+    max-width: 400px;
+    font-family: 'Roboto',sans-serif;
+    color: #171E34;
+    margin-bottom: 40px;
+
+}
+.second-content .con3{
+   word-wrap: break-word;
+    font-family: 'Roboto',sans-serif;
+    font-size: 0.14rem;
+    color: #777777;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+    /*max-width: 450px;*/
+   width: 100%;
+}
+
+.three-div{
+	width: 100%;
+	background: #f3f7fb;
+}
+
+.three-content{
+	    /* float: left; */
+    font-size: 0.12rem;
+    /* margin-left: 5%; */
+    padding: 0.15rem;
+    /* width: 35%; */
+}
+.three-content .con2{
+	font-size: 0.14rem;
+	margin: 0.2rem 0.2rem;
+    font-size: 28px;
+    line-height: 31px;
+    text-transform: none;
+    max-width: 400px;
+    font-family: 'Roboto',sans-serif;
+    color: #171E34;
+}
+.three-content .con3{
+	font-size: 0.12rem;
+	margin: 0.2rem 0.2rem;
+	word-wrap: break-word;
+    font-family: 'Roboto',sans-serif;
+    font-size: 14px;
+    color: #777777;
+    font-weight: 400;
+    margin-bottom: 30px
+}
+.three-pic{
+	    /* margin: 0.2rem 0 0 10%; */
+    width: 100%;
+    /* display: inline; */
+    /* box-shadow: 40px 40px 0 5px #f0f1f7; */
+    /* float: left; */
+    /* box-shadow: -0.2rem -0.2rem 0 #f0f1f7;*/
+}
+
+.full-bg  {
+    padding-bottom: 0;
+    height: inherit;
+    background-size: cover;
+    font-size: 42px;
+    color: #ffffff;
+    background-attachment: fixed;
+    background-color: #181e33;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    background-size: contain;
+    height: 525px;
+    width:100%;
+    float: left;
+}
+
+.full-bg h2 {
+	
+    padding-top: 120px;
+    font-weight: 400;
+    color: #fefefe;
+    font-size: 28px;
+}
+
+.full-bg .lead{
+    max-width: 380px;
+    margin-left: 0;
+    font-weight: 400;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #fefefe;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.full-bg a{
+    background-color: white;
+    color: black;
+    border-radius: 25px 25px;
+    padding: 15px 32px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+}
+
